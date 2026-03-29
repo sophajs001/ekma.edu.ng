@@ -2848,6 +2848,7 @@ MOBILE PHONES
   #intro-paragraph {
     display: -webkit-box;
     -webkit-line-clamp: 6;   /* show 6 lines instead of 3 */
+    line-clamp: 6;           /* standard property for compatibility */
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -2863,11 +2864,12 @@ MOBILE PHONES
 
 /* Desktop: always show full text, hide read-more link */
 @media (min-width: 769px) {
-  #intro-paragraph {
-    display: block;
-    -webkit-line-clamp: unset;
-    overflow: visible;
-  }
+#intro-paragraph {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
   .read-more {
     display: none;
   }
