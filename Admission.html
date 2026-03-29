@@ -1,0 +1,819 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excellent Kiddies Montessori Academy | EKMA</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Announcement Modal -->
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md"><!-- compact modal -->
+    <div class="modal-content shadow-sm rounded-3">
+
+      <!-- Header -->
+      <div class="modal-header border-0">
+        <h6 class="modal-title fw-bold text-success ms-2" id="announcementModalLabel">Announcements</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <!-- Announcement List -->
+        <ul class="list-group list-group-flush small mb-3">
+          <li class="list-group-item">Admissions ongoing for 2026/2027 session</li>
+          <li class="list-group-item">Common Entrance update: Forms available</li>
+          <li class="list-group-item">Resumption date: 15th March 2026</li>
+          <li class="list-group-item">Exam timetable release soon</li>
+        </ul>
+
+        <!-- Newsletter Section -->
+        <div class="text-start mb-3 ms-2">
+          <p class="fw-semibold mb-2">Full Newsletter Available</p>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             class="btn btn-success btn-sm" 
+             download>
+            Download <i class="bi bi-download"></i>
+          </a>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             target="_blank" 
+             class="btn btn-outline-primary btn-sm ms-2">
+            View Online <i class="bi bi-eye"></i>
+          </a>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="border-top pt-3 ms-2">
+          <h6 class="fw-semibold mb-2">Other Resources</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="ASSETS/SchoolFeesBreakdown.pdf" class="btn btn-outline-secondary btn-sm" download>
+              School Fees Breakdown
+            </a>
+            <a href="ASSETS/ListOfBooks.pdf" class="btn btn-outline-secondary btn-sm" download>
+              List of Books
+            </a>
+            <a href="ASSETS/BusRoutingPrices.pdf" class="btn btn-outline-secondary btn-sm" download>
+              Bus Routing Prices
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer border-0 justify-content-center">
+        <small class="text-danger fw-semibold text-center">
+          *Announcements and resources are updated regularly.*
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+<body>
+
+ <!-- Top Header Bar -->
+<div class="header-top">
+  <div class="container-fluid p-0"> <!-- remove container padding -->
+    <div class="row m-0 align-items-center"> <!-- remove row margin -->
+      
+    <!-- Left: Follow Us -->
+<div class="col-6 d-flex align-items-center header-left">
+  <div class="follow-us ms-3">
+    <span>Follow Us:</span>
+    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+  </div>
+</div>
+
+      <!-- Right: Contact Info -->
+      <div class="col-6 d-flex align-items-center justify-content-end header-right">
+        <div class="contact-info me-3">
+          <span><i class="bi bi-geo-alt"></i> Bwari, Abuja FCT</span>
+          <span><i class="bi bi-envelope"></i> excellentkmontacademy@gmail.com</span>
+          <span><i class="bi bi-telephone"></i> +234 806 0220 612, +234 905 4146 797 </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="me-2 rounded-circle" height="45" width="45">
+      <span class="fw-bold fs-6">EKMA</span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" 
+            aria-label="Toggle navigation">
+      <span class="hamburger"><i class="bi bi-list"></i></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+              <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
+              <li><a class="dropdown-item" href="Mission-vision.html">Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="Facilities.html">Facilities Overview</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="primary-section.html">Nursery / Primary Section</a></li>
+              <li><a class="dropdown-item" href="secondary-section.html">Secondary Section</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Achievements.html">Achievements</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#announcementModal">Announcements</a></li>
+              <li><a class="dropdown-item" href="news-events.html">News & Events</a></li>
+              <li><a class="dropdown-item" href="photo-gallery.html">Photo Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+<!-- Bell Notification -->
+<li class="nav-item ms-lg-3">
+  <a href="#" class="nav-link position-relative bell-link" data-bs-toggle="modal" data-bs-target="#announcementModal">
+    <i class="bi bi-bell-fill bell-icon"></i>
+    <span class="badge bell-badge">1</span>
+  </a>
+</li>
+
+        </ul>
+
+        <!-- Social Media Icons (mobile only) -->
+        <div class="mt-3 text-center d-lg-none d-block">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Admission Page Hero -->
+<section class="admission-hero">
+  <img src="GRAPHICS/admission-hero.jpg" alt="Admission Hero" class="admission-hero-img">
+
+  <div class="admission-hero-content text-center">
+    <h1 class="admission-hero-title fw-bold">Admissions at EKMA</h1>
+    <p class="admission-hero-subtext lead">From Nursery foundations to Secondary excellence</p>
+  </div>
+</section>
+
+<!-- Admission Intro Section -->
+<section id="admission-intro" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="intro-box">
+          <div class="intro-line"></div>
+          <div class="intro-text ps-4">
+            <p class="secondary-text">
+              At Excellent Kiddies Montessori Academy, admissions are designed to be simple, transparent, and welcoming. From our nurturing Day Care and Crèche, through Nursery and Primary, and into Secondary school, we provide clear steps and supportive guidance at every stage. Our admission process ensures each learner is placed in the right environment to thrive academically, socially, and emotionally. With experienced teachers, a caring community, and a strong track record of success,
+               EKMA is the right choice for building lives for greatness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="admission-requirements" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Admission Requirements</h2>
+      <p class="lead">Clear steps for each stage of your child’s journey</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Nursery & Crèche -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-success"> Crèche, KG & Nursery</h5>
+            <ul class="list-unstyled">
+              <li>✔ Birth certificate</li>
+              <li>✔ Medical/immunization record</li>
+              <li>✔ Passport photographs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Primary School</h5>
+            <ul class="list-unstyled">
+              <li>✔ Admission form</li>
+              <li>✔ Birth certificate</li>
+              <li>✔ Medical report</li>
+              <li>✔ Previous school report card (if transferring)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary (spanning full width) -->
+      <div class="col-12">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-danger">Secondary School</h5>
+            <ul class="list-unstyled">
+              <li>✔ Admission form</li>
+              <li>✔ Entrance exam (English, Mathematics, General Knowledge)</li>
+              <li>✔ Interview with student and parents</li>
+              <li>✔ Transfer certificate (if applicable)</li>
+              <li>✔ Medical report</li>
+              <li>✔ Passport photographs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="admission-process" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Admission Process</h2>
+      <p class="lead">We are delighted that you are considering Excellent Kiddies Montessori Academy for your child.</p>
+      <p>Our admission process is simple, transparent, and designed to ensure that every child is placed appropriately for success.</p>
+    </div>
+
+  <!-- Flowchart -->
+  <div class="flowchart">
+    <div class="flow-step">
+      <div class="circle">1</div>
+      <h5>Visit the School</h5>
+      <p>Parents or guardians are encouraged to visit the school to make inquiries and experience our environment firsthand.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">2</div>
+      <h5>Review Fees & Facilities</h5>
+      <p>During your visit, you will be guided through our fee structure and shown around our facilities.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">3</div>
+      <h5>Obtain Admission Form</h5>
+      <p>An admission form will be issued for completion. Required documents should be submitted alongside the form.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">4</div>
+      <h5>Entrance Examination</h5>
+      <p>The child will sit for a placement exam appropriate for their age and class level.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">5</div>
+      <h5>Admission Decision</h5>
+      <p>Admission is granted based on exam performance and overall assessment.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">6</div>
+      <h5>Payment of Fees</h5>
+      <p>Upon successful admission, parents complete payment of fees. Uniforms and books are then issued.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">7</div>
+      <h5>Resumption</h5>
+      <p>The child resumes school on the approved date and officially becomes part of the EKMA family.</p>
+    </div>
+  </div>
+ 
+
+</section>
+   
+<section id="school-fees" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">School Fees & Tuition Analysis</h2>
+      <p class="lead">Transparent breakdown of all costs per term</p>
+    </div>
+
+    <!-- Fees Table -->
+    <div class="table-responsive mb-5">
+      <table class="table table-bordered table-striped text-center align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Category</th>
+            <th>Tuition</th>
+            <th>Books & Stationery</th>
+            <th>Uniforms</th>
+            <th>Extracurricular</th>
+            <th>Total (per term)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day Care / Crèche & Nursery</td>
+            <td>₦XX,XXX</td>
+            <td>₦X,XXX</td>
+            <td>₦X,XXX</td>
+            <td>₦X,XXX</td>
+            <td>₦XX,XXX</td>
+          </tr>
+          <tr>
+            <td>Primary School</td>
+            <td>₦XX,XXX</td>
+            <td>₦X,XXX</td>
+            <td>₦X,XXX</td>
+            <td>₦X,XXX</td>
+            <td>₦XX,XXX</td>
+          </tr>
+          <tr>
+            <td>Secondary School</td>
+            <td>₦XX,XXX</td>
+            <td>₦X,XXX</td>
+            <td>₦X,XXX</td>
+            <td>₦X,XXX</td>
+            <td>₦XX,XXX</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- School Bus Analysis -->
+    <div class="text-center mb-4">
+      <h3 class="fw-bold">School Bus Routes & Fees</h3>
+      <p class="lead">Convenient transport options across Lagos</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Route 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-success">Route 1: Ikeja – School</h5>
+            <p>Pickup points: Ikeja GRA, Maryland, Ogba</p>
+            <p><strong>Fee per term:</strong> ₦XX,XXX</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Route 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Route 2: Surulere – School</h5>
+            <p>Pickup points: Surulere, Yaba, Ebute Metta</p>
+            <p><strong>Fee per term:</strong> ₦XX,XXX</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Route 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Route 3: Lekki – School</h5>
+            <p>Pickup points: Lekki Phase 1, Ajah, Victoria Island</p>
+            <p><strong>Fee per term:</strong> ₦XX,XXX</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <div class="mt-4 text-center">
+      <p class="small text-muted">
+        *Fees are payable per term. Bus routes may be adjusted based on demand. 
+        Discounts available for siblings. All payments are receipted and transparent.*
+      </p>
+    </div>
+  </div>
+</section>
+
+  
+
+<section class="discover-split">
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+
+      <!-- LEFT SIDE -->
+      <div class="col-lg-6 discover-left">
+        <div class="container">
+          <div class="discover-content">
+            <h2 class="discover-title">
+              Discover the <span>DIFFERENCE</span>
+            </h2>
+
+            <p class="discover-text">
+              At Excellent Kiddies Montessori Academy, we nurture curiosity,
+              build confidence, and develop lifelong learners through
+              hands-on Montessori education.
+            </p>
+
+            <div class="discover-features">
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                Montessori-Based Learning
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                Experienced Educators
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                Safe Environment
+              </div>
+            </div>
+
+            <a href="#" class="btn discover-btn">
+              Apply for Admission
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-6 discover-right"></div>
+
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<section class="faq-section">
+  <div class="container-fluid p-0">
+    <div class="faq-content row gx-5">
+
+      <!-- LEFT COLUMN -->
+      <div class="col-lg-6">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">What are the admission requirements?</button>
+            <div class="faq-answer">
+              <p>Students must meet our academic prerequisites and submit required documents including birth certificate and past academic records.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is there a uniform policy?</button>
+            <div class="faq-answer">
+              <p>Yes, all students are required to wear the school uniform, details of which are provided upon admission.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="col-lg-6">
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">What extracurricular activities are offered?</button>
+            <div class="faq-answer">
+              <p>We offer sports, music, art, and STEM clubs to enrich the students’ learning experience.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How can parents stay involved in school activities?</button>
+            <div class="faq-answer">
+              <p>Parents can join our PTA, attend school events, and participate in volunteer programs.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What support services are available for students?</button>
+            <div class="faq-answer">
+              <p>We provide counseling, tutoring, and mentorship programs to support each student’s development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Admission CTA Section -->
+<section class="admission-cta py-5">
+  <div class="container">
+    <div class="cta-inner text-center">
+      <h2 class="fw-bold mb-3">Have Questions About Admissions?</h2>
+      <p class="lead mb-4">
+        Our team is here to guide you through the admission process and answer any questions you may have.
+        Contact us today to schedule an appointment or learn more about enrollment.
+      </p>
+      <a href="contact.html" class="cta-btn">
+        Contact Us <i class="bi bi-arrow-right-short"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- EKMA Footer -->
+<footer class="ekma-footer">
+
+  <!-- Subscribe / Newsletter Section -->
+  <div class="footer-subscribe">
+    <div class="container text-center">
+      <h3>Stay Updated with EKMA</h3>
+      <p>Subscribe to our newsletter for the latest news, events, and updates.</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Footer Content -->
+  <div class="footer-main">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Logo & About -->
+        <div class="col-md-4">
+          <div class="footer-logo">
+            <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="logo-img">
+            <p>EXCELLENT KIDDIES MONTESSORI ACADEMY nurtures young minds through quality education, creativity, and character-building activities.</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">News & Events</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Plot A2 Action Area, Behind Federal Government Girls College Bwari. Plot 217 Kuduru Layout Behind Nigerian Law School, Off Kuduru Road Bwari FCT</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 806 0220 612</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 905 4146 797</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@gmail.com</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@yahoo.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- Bottom Footer -->
+<div class="footer-bottom">
+  <p>
+    &copy; 2026 Excellent Kiddies Montessori Academy. All Rights Reserved. 
+    Website Built By Sophajs Global Tech.
+  </p>
+</div>
+
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <script>
+    // FAQ Accordion Toggle
+const faqItems = document.querySelectorAll(".faq-question");
+
+faqItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const currentlyActive = document.querySelector(".faq-question.active");
+    if(currentlyActive && currentlyActive !== item) {
+      currentlyActive.classList.remove("active");
+      currentlyActive.nextElementSibling.style.maxHeight = 0;
+    }
+
+    item.classList.toggle("active");
+    const answer = item.nextElementSibling;
+    if(item.classList.contains("active")) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = 0;
+    }
+  });
+});
+  </script>
+ <script>
+// Count up animation when in view
+const counters = document.querySelectorAll('.stat-number');
+
+const speed = 200; // smaller = faster
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+};
+
+// Trigger when section scrolls into view
+const statsSection = document.querySelector('.ekma-stats-modern');
+let statsDone = false;
+
+window.addEventListener('scroll', () => {
+  const sectionTop = statsSection.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if (sectionTop < screenHeight && !statsDone) {
+    animateCounters();
+    statsDone = true;
+  }
+});
+</script>
+
+<script>
+  // Initialize carousel (keep your existing settings)
+  const heroCarousel = document.querySelector('#heroCarousel');
+  const bsCarousel = new bootstrap.Carousel(heroCarousel, {
+    interval: 5000,
+    ride: 'carousel',
+    pause: false
+  });
+
+  // Sync external indicators (they remain outside the carousel)
+  const externalIndicators = Array.from(document.querySelectorAll('.carousel-indicators [data-bs-slide-to]'));
+
+  function setActiveIndicator(index) {
+    externalIndicators.forEach((btn, i) => {
+      if (i === index) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-current', 'true');
+      } else {
+        btn.classList.remove('active');
+        btn.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  // Initial sync using currently active slide
+  const initIndex = Array.from(heroCarousel.querySelectorAll('.carousel-item')).findIndex(i => i.classList.contains('active'));
+  setActiveIndicator(initIndex >= 0 ? initIndex : 0);
+
+  // Update indicators when carousel slides
+  heroCarousel.addEventListener('slide.bs.carousel', (e) => {
+    // e.to contains the index being slid to
+    if (typeof e.to === 'number') setActiveIndicator(e.to);
+  });
+  // Ensure final state after transition as well
+  heroCarousel.addEventListener('slid.bs.carousel', (e) => {
+    if (typeof e.to === 'number') setActiveIndicator(e.to);
+  });
+
+  // Make outside indicators control the carousel
+  externalIndicators.forEach((btn, idx) => {
+    btn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      bsCarousel.to(idx);
+      setActiveIndicator(idx);
+    });
+  });
+</script>
+ 
+<script>
+  (function () {
+    const imgs = document.querySelectorAll('.hero-img');
+
+    function trySwapTo2x(img) {
+      const dpr = window.devicePixelRatio || 1;
+      const displayWidth = img.clientWidth * dpr;
+      const naturalWidth = img.naturalWidth || 0;
+
+      // if image is being upscaled on this device, attempt to use a 2x asset
+      if (naturalWidth && naturalWidth < displayWidth) {
+        console.warn('Hero image upscaled:', img.src, 'natural:', naturalWidth, 'display:', Math.round(displayWidth));
+        const data2x = img.dataset.src2x || img.dataset.src2X || img.dataset['2x'];
+
+        if (data2x) {
+          img.srcset = `${img.src} 1x, ${data2x} 2x`;
+          // set src to the higher-res to avoid initial blur on many browsers
+          img.src = data2x;
+          return;
+        }
+
+        // try common @2x filename convention (image.png -> image@2x.png)
+        const try2x = img.src.replace(/(\.\w+)(?:$)/, '@2x$1');
+        fetch(try2x, { method: 'HEAD' })
+          .then(res => {
+            if (res.ok) {
+              img.srcset = `${img.src} 1x, ${try2x} 2x`;
+              img.src = try2x;
+            }
+          })
+          .catch(() => { /* ignore network errors */ });
+      }
+    }
+
+    function init() {
+      imgs.forEach(img => {
+        if (img.complete) trySwapTo2x(img);
+        else img.addEventListener('load', () => trySwapTo2x(img));
+      });
+    }
+
+    // run on load and on resize / DPR change
+    window.addEventListener('load', init);
+    window.addEventListener('resize', () => imgs.forEach(i => trySwapTo2x(i)));
+    // listen for DPR changes (some browsers fire a resize, but best effort)
+    if (window.matchMedia) {
+      const mq = window.matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`);
+      mq.addEventListener?.('change', () => imgs.forEach(i => trySwapTo2x(i)));
+    }
+
+    // helpful quick diagnostic you can run in console:
+    // document.querySelectorAll('.hero-img').forEach(img=>console.log(img.src, 'natural', img.naturalWidth, 'display', img.clientWidth, 'dpr', window.devicePixelRatio));
+  })();
+</script>
+
+ 
+<script>
+  window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+  });
+</script>
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+

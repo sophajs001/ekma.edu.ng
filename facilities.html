@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excellent Kiddies Montessori Academy | EKMA</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Announcement Modal -->
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md"><!-- compact modal -->
+    <div class="modal-content shadow-sm rounded-3">
+
+      <!-- Header -->
+      <div class="modal-header border-0">
+        <h6 class="modal-title fw-bold text-success ms-2" id="announcementModalLabel">Announcements</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <!-- Announcement List -->
+        <ul class="list-group list-group-flush small mb-3">
+          <li class="list-group-item">Admissions ongoing for 2026/2027 session</li>
+          <li class="list-group-item">Common Entrance update: Forms available</li>
+          <li class="list-group-item">Resumption date: 15th March 2026</li>
+          <li class="list-group-item">Exam timetable release soon</li>
+        </ul>
+
+        <!-- Newsletter Section -->
+        <div class="text-start mb-3 ms-2">
+          <p class="fw-semibold mb-2">Full Newsletter Available</p>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             class="btn btn-success btn-sm" 
+             download>
+            Download <i class="bi bi-download"></i>
+          </a>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             target="_blank" 
+             class="btn btn-outline-primary btn-sm ms-2">
+            View Online <i class="bi bi-eye"></i>
+          </a>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="border-top pt-3 ms-2">
+          <h6 class="fw-semibold mb-2">Other Resources</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="ASSETS/SchoolFeesBreakdown.pdf" class="btn btn-outline-secondary btn-sm" download>
+              School Fees Breakdown
+            </a>
+            <a href="ASSETS/ListOfBooks.pdf" class="btn btn-outline-secondary btn-sm" download>
+              List of Books
+            </a>
+            <a href="ASSETS/BusRoutingPrices.pdf" class="btn btn-outline-secondary btn-sm" download>
+              Bus Routing Prices
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer border-0 justify-content-center">
+        <small class="text-danger fw-semibold text-center">
+          *Announcements and resources are updated regularly.*
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+<body>
+
+ <!-- Top Header Bar -->
+<div class="header-top">
+  <div class="container-fluid p-0"> <!-- remove container padding -->
+    <div class="row m-0 align-items-center"> <!-- remove row margin -->
+      
+    <!-- Left: Follow Us -->
+<div class="col-6 d-flex align-items-center header-left">
+  <div class="follow-us ms-3">
+    <span>Follow Us:</span>
+    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+  </div>
+</div>
+
+      <!-- Right: Contact Info -->
+      <div class="col-6 d-flex align-items-center justify-content-end header-right">
+        <div class="contact-info me-3">
+          <span><i class="bi bi-geo-alt"></i> Bwari, Abuja FCT</span>
+          <span><i class="bi bi-envelope"></i> excellentkmontacademy@gmail.com</span>
+          <span><i class="bi bi-telephone"></i> +234 806 0220 612, +234 905 4146 797 </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="me-2 rounded-circle" height="45" width="45">
+      <span class="fw-bold fs-6">EKMA</span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" 
+            aria-label="Toggle navigation">
+      <span class="hamburger"><i class="bi bi-list"></i></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+              <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
+              <li><a class="dropdown-item" href="Mission-vision.html">Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="Facilities.html">Facilities Overview</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="primary-section.html">Nursery / Primary Section</a></li>
+              <li><a class="dropdown-item" href="secondary-section.html">Secondary Section</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Achievements.html">Achievements</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#announcementModal">Announcements</a></li>
+              <li><a class="dropdown-item" href="news-events.html">News & Events</a></li>
+              <li><a class="dropdown-item" href="photo-gallery.html">Photo Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+<!-- Bell Notification -->
+<li class="nav-item ms-lg-3">
+  <a href="#" class="nav-link position-relative bell-link" data-bs-toggle="modal" data-bs-target="#announcementModal">
+    <i class="bi bi-bell-fill bell-icon"></i>
+    <span class="badge bell-badge">1</span>
+  </a>
+</li>
+
+        </ul>
+
+        <!-- Social Media Icons (mobile only) -->
+        <div class="mt-3 text-center d-lg-none d-block">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Facilities Hero -->
+<section class="facilities-hero">
+  <!-- Background Image -->
+  <img src="GRAPHICS/ekma lab.avif" alt="Facilities Overview" class="facilities-hero-img">
+
+  <!-- Content -->
+  <div class="facilities-hero-content">
+    <h1 class="facilities-hero-title">Explore Our World-Class Facilities</h1>
+    <p class="facilities-hero-subtext">
+      From modern labs and sports arenas to creative studios, robotics, and safe playgrounds
+     
+</section>
+
+
+
+
+<section id="facilities" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Facilities</h2>
+      <p class="lead">EKMA offers world-class facilities that inspire learning, creativity, and innovation for every child.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Sports Complex -->
+      <div class="col-md-6 col-lg-4">
+        <div class="facility-card shadow-sm h-100 text-center p-4">
+          <div class="facility-img-wrapper position-relative">
+            <img src="GRAPHICS/ekma sport image.png" alt="Sports Complex" class="facility-img img-fluid mb-3 curve-left">
+            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
+          </div>
+          <h4 class="fw-semibold">Sports Complex</h4>
+          <p>Football pitch, basketball & volleyball courts, athletics track, and indoor games for fitness and teamwork.</p>
+        </div>
+      </div>
+
+      <!-- Science Labs -->
+      <div class="col-md-6 col-lg-4">
+        <div class="facility-card shadow-sm h-100 text-center p-4">
+          <div class="facility-img-wrapper position-relative">
+            <img src="GRAPHICS/ekma chemistry lab.png" alt="Science Labs" class="facility-img img-fluid mb-3 curve-right">
+            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
+          </div>
+          <h4 class="fw-semibold">Science Laboratories</h4>
+          <p>Physics, Chemistry, Biology, Agricultural Science, and Computer labs for hands-on learning and innovation.</p>
+        </div>
+      </div>
+
+      <!-- Robotics & Innovation -->
+      <div class="col-md-6 col-lg-4">
+        <div class="facility-card shadow-sm h-100 text-center p-4">
+          <div class="facility-img-wrapper position-relative">
+            <img src="GRAPHICS/ekma computer lab.jpg" alt="Robotics Lab" class="facility-img img-fluid mb-3 curve-left">
+            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
+          </div>
+          <h4 class="fw-semibold">Robotics & Innovation Lab</h4>
+          <p>Hands-on robotics, coding, and AI projects that prepare students for the future of technology.</p>
+        </div>
+      </div>
+
+      <!-- Music & Arts -->
+      <div class="col-md-6 col-lg-4">
+        <div class="facility-card shadow-sm h-100 text-center p-4">
+          <div class="facility-img-wrapper position-relative">
+            <img src="GRAPHICS/ekma music and art .jpg" alt="Music & Arts" class="facility-img img-fluid mb-3 curve-right">
+            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
+          </div>
+          <h4 class="fw-semibold">Music & Arts Studio</h4>
+          <p>Dedicated music studio, instruments, and art rooms that nurture creativity and cultural expression.</p>
+        </div>
+      </div>
+
+      <!-- Playground -->
+      <div class="col-md-6 col-lg-4">
+        <div class="facility-card shadow-sm h-100 text-center p-4">
+          <div class="facility-img-wrapper position-relative">
+            <img src="GRAPHICS/ekma play ground.jpg" alt="Playground" class="facility-img img-fluid mb-3 curve-left">
+            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
+          </div>
+          <h4 class="fw-semibold">Children’s Playground</h4>
+          <p>Safe and fun playgrounds with swings, slides, and climbing frames to encourage play and social interaction.</p>
+        </div>
+      </div>
+
+      <!-- Transport -->
+      <div class="col-md-6 col-lg-4">
+        <div class="facility-card shadow-sm h-100 text-center p-4">
+          <div class="facility-img-wrapper position-relative">
+            <img src="GRAPHICS/emka buses.jpeg" alt="School Buses" class="facility-img img-fluid mb-3 curve-right">
+            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
+          </div>
+          <h4 class="fw-semibold">School Transport</h4>
+          <p>A fleet of well-maintained buses ensures safe and reliable transportation for students across the city.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="facilityModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <img src="" id="modalImage" class="img-fluid rounded" alt="Facility Image">
+      <div class="p-3 text-center" id="modalCaption"></div>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- EKMA Footer -->
+<footer class="ekma-footer">
+<!-- Subscribe / Newsletter Section -->
+<div class="footer-subscribe">
+  <div class="container text-center">
+    <h3 class="footer-subscribe-title">Stay updated with Ekma</h3>
+    <p class="footer-subscribe-text">
+      Subscribe to our newsletter for the latest news, events, and updates.
+    </p>
+    <form class="subscribe-form" onsubmit="event.preventDefault(); showModal();">
+      <input type="email" id="subscribe-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div id="subscribeModal" class="modal-overlay">
+  <div class="modal-box">
+    <h4>Subscription Successful</h4>
+    <p>Thank you for subscribing! We’ll keep you updated.</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+
+  <!-- Main Footer Content -->
+  <div class="footer-main">
+    <div class="container">
+      <div class="row gy-4">
+<!-- Logo & About -->
+<div class="col-md-4">
+  <div class="footer-logo">
+    <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="logo-img">
+    <p>
+      EXCELLENT KIDDIES MONTESSORI ACADEMY nurtures young minds through quality education, 
+      creativity, and character‑building activities. We provide a safe and inspiring environment 
+      where children are guided to develop strong academic foundations, moral values, and social skills.
+    </p>
+  </div>
+</div>
+<!-- Quick Links -->
+<div class="col-md-2">
+  <h5>Quick Links</h5>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="History.html">History</a></li>
+    <li><a href="Admission.html">Admissions</a></li>
+    <li><a href="Activities.html">Activities</a></li>
+    <li><a href="news-event.html">News & Events</a></li>
+     <li><a href="Achievements.html">Achievements</a></li>
+  </ul>
+</div>
+
+
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Plot A2 Action Area, Behind Federal Government Girls College Bwari. Plot 217 Kuduru Layout Behind Nigerian Law School, Off Kuduru Road Bwari FCT</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 806 0220 612</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 905 4146 797</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@gmail.com</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@yahoo.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+<!-- Bottom Footer -->
+<div class="footer-bottom">
+  <p>
+    &copy; 2026 Excellent Kiddies Montessori Academy. All Rights Reserved. 
+    Website Built By 
+    <a href="https://sophajs.com/" class="footer-credit-link" target="_blank">
+      Sophajs Global Tech
+    </a>
+  </p>
+</div>
+
+
+</footer>
+
+<script>
+  function showModal() {
+    const emailInput = document.getElementById("subscribe-email");
+    if (emailInput.value) {
+      // Show modal
+      document.getElementById("subscribeModal").style.display = "flex";
+      // Clear input field
+      emailInput.value = "";
+    }
+  }
+
+  function closeModal() {
+    document.getElementById("subscribeModal").style.display = "none";
+  }
+
+  // Optional: close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById("subscribeModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+<script>
+  // Attach click event to all facility images
+  document.querySelectorAll('.facility-img-wrapper').forEach(wrapper => {
+    wrapper.addEventListener('click', function() {
+      const imgSrc = this.querySelector('img').getAttribute('src');
+      document.getElementById('modalImage').setAttribute('src', imgSrc);
+      const modal = new bootstrap.Modal(document.getElementById('facilityModal'));
+      modal.show();
+    });
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <script>
+    // FAQ Accordion Toggle
+const faqItems = document.querySelectorAll(".faq-question");
+
+faqItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const currentlyActive = document.querySelector(".faq-question.active");
+    if(currentlyActive && currentlyActive !== item) {
+      currentlyActive.classList.remove("active");
+      currentlyActive.nextElementSibling.style.maxHeight = 0;
+    }
+
+    item.classList.toggle("active");
+    const answer = item.nextElementSibling;
+    if(item.classList.contains("active")) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = 0;
+    }
+  });
+});
+  </script>
+ <script>
+// Count up animation when in view
+const counters = document.querySelectorAll('.stat-number');
+
+const speed = 200; // smaller = faster
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+};
+
+// Trigger when section scrolls into view
+const statsSection = document.querySelector('.ekma-stats-modern');
+let statsDone = false;
+
+window.addEventListener('scroll', () => {
+  const sectionTop = statsSection.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if (sectionTop < screenHeight && !statsDone) {
+    animateCounters();
+    statsDone = true;
+  }
+});
+</script>
+
+<script>
+  // Initialize carousel (keep your existing settings)
+  const heroCarousel = document.querySelector('#heroCarousel');
+  const bsCarousel = new bootstrap.Carousel(heroCarousel, {
+    interval: 5000,
+    ride: 'carousel',
+    pause: false
+  });
+
+  // Sync external indicators (they remain outside the carousel)
+  const externalIndicators = Array.from(document.querySelectorAll('.carousel-indicators [data-bs-slide-to]'));
+
+  function setActiveIndicator(index) {
+    externalIndicators.forEach((btn, i) => {
+      if (i === index) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-current', 'true');
+      } else {
+        btn.classList.remove('active');
+        btn.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  // Initial sync using currently active slide
+  const initIndex = Array.from(heroCarousel.querySelectorAll('.carousel-item')).findIndex(i => i.classList.contains('active'));
+  setActiveIndicator(initIndex >= 0 ? initIndex : 0);
+
+  // Update indicators when carousel slides
+  heroCarousel.addEventListener('slide.bs.carousel', (e) => {
+    // e.to contains the index being slid to
+    if (typeof e.to === 'number') setActiveIndicator(e.to);
+  });
+  // Ensure final state after transition as well
+  heroCarousel.addEventListener('slid.bs.carousel', (e) => {
+    if (typeof e.to === 'number') setActiveIndicator(e.to);
+  });
+
+  // Make outside indicators control the carousel
+  externalIndicators.forEach((btn, idx) => {
+    btn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      bsCarousel.to(idx);
+      setActiveIndicator(idx);
+    });
+  });
+</script>
+ 
+<script>
+  (function () {
+    const imgs = document.querySelectorAll('.hero-img');
+
+    function trySwapTo2x(img) {
+      const dpr = window.devicePixelRatio || 1;
+      const displayWidth = img.clientWidth * dpr;
+      const naturalWidth = img.naturalWidth || 0;
+
+      // if image is being upscaled on this device, attempt to use a 2x asset
+      if (naturalWidth && naturalWidth < displayWidth) {
+        console.warn('Hero image upscaled:', img.src, 'natural:', naturalWidth, 'display:', Math.round(displayWidth));
+        const data2x = img.dataset.src2x || img.dataset.src2X || img.dataset['2x'];
+
+        if (data2x) {
+          img.srcset = `${img.src} 1x, ${data2x} 2x`;
+          // set src to the higher-res to avoid initial blur on many browsers
+          img.src = data2x;
+          return;
+        }
+
+        // try common @2x filename convention (image.png -> image@2x.png)
+        const try2x = img.src.replace(/(\.\w+)(?:$)/, '@2x$1');
+        fetch(try2x, { method: 'HEAD' })
+          .then(res => {
+            if (res.ok) {
+              img.srcset = `${img.src} 1x, ${try2x} 2x`;
+              img.src = try2x;
+            }
+          })
+          .catch(() => { /* ignore network errors */ });
+      }
+    }
+
+    function init() {
+      imgs.forEach(img => {
+        if (img.complete) trySwapTo2x(img);
+        else img.addEventListener('load', () => trySwapTo2x(img));
+      });
+    }
+
+    // run on load and on resize / DPR change
+    window.addEventListener('load', init);
+    window.addEventListener('resize', () => imgs.forEach(i => trySwapTo2x(i)));
+    // listen for DPR changes (some browsers fire a resize, but best effort)
+    if (window.matchMedia) {
+      const mq = window.matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`);
+      mq.addEventListener?.('change', () => imgs.forEach(i => trySwapTo2x(i)));
+    }
+
+    // helpful quick diagnostic you can run in console:
+    // document.querySelectorAll('.hero-img').forEach(img=>console.log(img.src, 'natural', img.naturalWidth, 'display', img.clientWidth, 'dpr', window.devicePixelRatio));
+  })();
+</script>
+
+ 
+<script>
+  window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+  });
+</script>
+ 

@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excellent Kiddies Montessori Academy | EKMA</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Announcement Modal -->
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md"><!-- compact modal -->
+    <div class="modal-content shadow-sm rounded-3">
+
+      <!-- Header -->
+      <div class="modal-header border-0">
+        <h6 class="modal-title fw-bold text-success ms-2" id="announcementModalLabel">Announcements</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <!-- Announcement List -->
+        <ul class="list-group list-group-flush small mb-3">
+          <li class="list-group-item">Admissions ongoing for 2026/2027 session</li>
+          <li class="list-group-item">Common Entrance update: Forms available</li>
+          <li class="list-group-item">Resumption date: 15th March 2026</li>
+          <li class="list-group-item">Exam timetable release soon</li>
+        </ul>
+
+        <!-- Newsletter Section -->
+        <div class="text-start mb-3 ms-2">
+          <p class="fw-semibold mb-2">Full Newsletter Available</p>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             class="btn btn-success btn-sm" 
+             download>
+            Download <i class="bi bi-download"></i>
+          </a>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             target="_blank" 
+             class="btn btn-outline-primary btn-sm ms-2">
+            View Online <i class="bi bi-eye"></i>
+          </a>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="border-top pt-3 ms-2">
+          <h6 class="fw-semibold mb-2">Other Resources</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="ASSETS/SchoolFeesBreakdown.pdf" class="btn btn-outline-secondary btn-sm" download>
+              School Fees Breakdown
+            </a>
+            <a href="ASSETS/ListOfBooks.pdf" class="btn btn-outline-secondary btn-sm" download>
+              List of Books
+            </a>
+            <a href="ASSETS/BusRoutingPrices.pdf" class="btn btn-outline-secondary btn-sm" download>
+              Bus Routing Prices
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer border-0 justify-content-center">
+        <small class="text-danger fw-semibold text-center">
+          *Announcements and resources are updated regularly.*
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+<body>
+
+ <!-- Top Header Bar -->
+<div class="header-top">
+  <div class="container-fluid p-0"> <!-- remove container padding -->
+    <div class="row m-0 align-items-center"> <!-- remove row margin -->
+      
+    <!-- Left: Follow Us -->
+<div class="col-6 d-flex align-items-center header-left">
+  <div class="follow-us ms-3">
+    <span>Follow Us:</span>
+    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+  </div>
+</div>
+
+      <!-- Right: Contact Info -->
+      <div class="col-6 d-flex align-items-center justify-content-end header-right">
+        <div class="contact-info me-3">
+          <span><i class="bi bi-geo-alt"></i> Bwari, Abuja FCT</span>
+          <span><i class="bi bi-envelope"></i> excellentkmontacademy@gmail.com</span>
+          <span><i class="bi bi-telephone"></i> +234 806 0220 612, +234 905 4146 797 </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="me-2 rounded-circle" height="45" width="45">
+      <span class="fw-bold fs-6">EKMA</span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" 
+            aria-label="Toggle navigation">
+      <span class="hamburger"><i class="bi bi-list"></i></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+              <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
+              <li><a class="dropdown-item" href="Mission-vision.html">Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="Facilities.html">Facilities Overview</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="primary-section.html">Nursery / Primary Section</a></li>
+              <li><a class="dropdown-item" href="secondary-section.html">Secondary Section</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Achievements.html">Achievements</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#announcementModal">Announcements</a></li>
+              <li><a class="dropdown-item" href="news-events.html">News & Events</a></li>
+              <li><a class="dropdown-item" href="photo-gallery.html">Photo Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+<!-- Bell Notification -->
+<li class="nav-item ms-lg-3">
+  <a href="#" class="nav-link position-relative bell-link" data-bs-toggle="modal" data-bs-target="#announcementModal">
+    <i class="bi bi-bell-fill bell-icon"></i>
+    <span class="badge bell-badge">1</span>
+  </a>
+</li>
+
+        </ul>
+
+        <!-- Social Media Icons (mobile only) -->
+        <div class="mt-3 text-center d-lg-none d-block">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- History Hero -->
+<section class="history-hero">
+  <img src="GRAPHICS/history-hero.jpg" alt="History Overview" class="history-hero-img">
+
+  <div class="history-hero-content">
+    <h1 class="history-hero-title">Our Journey Through Time</h1>
+    <p class="history-hero-subtext">
+      From humble beginnings to a beacon of excellence 
+    </p>
+  </div>
+</section>
+
+<!-- History Section -->
+<section id="history" class="py-5 bg-light">
+  <div class="container">
+    
+    <!-- Intro Paragraph Card -->
+    <div class="d-flex justify-content-center mb-5">
+      <div class="history-hero-card">
+        <p>
+          Excellent Kiddies Montessori Academy was founded to provide high-quality education and holistic development for children. 
+          Over the years, the school has nurtured generations of learners by focusing on intellectual growth, 
+          character development, creativity, and social responsibility.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- MAIN CONTENT -->
+      <div class="col-lg-8">
+
+        <div class="history-section mb-5">
+          <div class="timeline-badge">1990 – 2000</div>
+          <h2>Foundation & Early Years</h2>
+          <p>EKMA was established to provide a nurturing and structured learning environment where children could grow academically and socially.</p>
+          <p>During its early years, the school focused on strong classroom foundations, recruiting passionate teachers, and building a supportive learning community.</p>
+        </div>
+
+        <div class="history-section mb-5">
+          <div class="timeline-badge">2001 – 2015</div>
+          <h2>Growth & Expansion</h2>
+          <p>Between 2001 and 2015, the school expanded its facilities, built new classrooms, and improved its learning environment.</p>
+          <p>The curriculum was strengthened with sports, arts, and technology programs to ensure holistic child development.</p>
+        </div>
+
+        <div class="history-section">
+          <div class="timeline-badge">2016 – Present</div>
+          <h2>Modernization & Innovation</h2>
+          <p>In recent years, EKMA has embraced modern teaching methods including digital learning tools and STEM education.</p>
+          <p>The focus remains on preparing confident learners ready for global opportunities.</p>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="col-lg-4">
+<div class="history-sidebar mb-4">
+  <h4><i class="bi bi-link-45deg"></i> Quick Links</h4>
+  <ul class="list-unstyled">
+    <li>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#announcementModal">
+        <i class="bi bi-arrow-right"></i> Announcement
+      </a>
+    </li>
+    <li><a href="news-events.html"><i class="bi bi-arrow-right"></i> News & Events</a></li>
+    <li><a href="Admission.html"><i class="bi bi-arrow-right"></i> Admissions</a></li>
+    <li><a href="Activities.html"><i class="bi bi-arrow-right"></i> Activities</a></li>
+    <li><a href="Contact.html"><i class="bi bi-arrow-right"></i> Contact Us</a></li>
+  </ul>
+</div>
+
+
+        <div class="contact-box p-3 border rounded mb-4">
+          <h5><i class="bi bi-telephone"></i> Contact Information</h5>
+          <p><strong>Address:</strong><br> Excellent Kiddies Montessori Academy, Bwari, Abuja FCT</p>
+          <p><strong>Email:</strong><br> excellentkmontacademy@gmail.com</p>
+          <p><strong>Phone:</strong><br> +234 806 0220 612</p>
+        </div>
+
+        <div class="social-bar p-3 border rounded text-center">
+          <h5><i class="bi bi-share"></i> Connect With Us</h5>
+          <a href="https://facebook.com" target="_blank" class="mx-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" class="mx-2"><i class="bi bi-instagram"></i></a>
+          <a href="https://tiktok.com" target="_blank" class="mx-2"><i class="bi bi-tiktok"></i></a>
+          <a href="https://youtube.com" target="_blank" class="mx-2"><i class="bi bi-youtube"></i></a>
+        </div>
+
+      </div>
+
+    </div> <!-- END row -->
+
+  </div> <!-- END container -->
+</section> <!-- END history -->
+
+<!-- Mission Section -->
+<section class="bg-green-light py-5" id="mission">
+  <div class="container text-center">
+    <h2 class="mission-title">Our Mission</h2>
+    <p class="mission-text">
+      Welcome to Excellent Kiddies Montessori Academy, where we believe that education is the foundation for a brighter future. 
+      Our mission is to create an inclusive and inspiring environment where every child’s unique talents are nurtured, and their potential is realized. 
+      Through a balanced approach to academics, personal development, and creative expression, we empower students to become confident, compassionate leaders who are ready to thrive in an ever-evolving world.
+    </p>
+    <p class="mission-text">
+      We are committed to excellence in education, fostering a culture of curiosity, resilience, and integrity. 
+      Our experienced faculty, innovative programs, and vibrant community all work together to provide each student with the tools they need to succeed both in and out of the classroom.
+    </p>
+  </div>
+</section>
+
+
+<!-- Vision Section (same as before) -->
+<section class="vision py-5">
+  <div class="container">
+    <h3 class="section-title text-center mb-4">Our Vision</h3>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="vision-card p-4 text-center h-100 shadow-sm">
+          <i class="bi bi-person-fill vision-icon mb-3"></i>
+          <h5>Individual Growth</h5>
+          <p>We nurture each child's unique potential, ensuring personalized learning experiences that promote individual growth and creativity.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="vision-card p-4 text-center h-100 shadow-sm">
+          <i class="bi bi-lightbulb-fill vision-icon mb-3"></i>
+          <h5>Innovative Curriculum</h5>
+          <p>Our curriculum integrates social-emotional development with early literacy and numeracy, preparing students for a dynamic future.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="vision-card p-4 text-center h-100 shadow-sm">
+          <i class="bi bi-star-fill vision-icon mb-3"></i>
+          <h5>Building Confident Leaders</h5>
+          <p>We cultivate confident, creative thinkers who are ready to make their mark in the world with character and competence.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="vision-card p-4 text-center h-100 shadow-sm">
+          <i class="bi bi-gear-fill vision-icon mb-3"></i>
+          <h5>Real-World Skills</h5>
+          <p>Hands-on learning equips students with real-world skills, positioning them ahead in any industry they choose to serve.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="vision-card p-4 text-center h-100 shadow-sm">
+          <i class="bi bi-emoji-smile-fill vision-icon mb-3"></i>
+          <h5>Holistic Education</h5>
+          <p>Balances academic excellence with emotional intelligence, preparing well-rounded individuals for future success.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="vision-card p-4 text-center h-100 shadow-sm">
+          <i class="bi bi-heart-fill vision-icon mb-3"></i>
+          <h5>Inspirational Learning Environment</h5>
+          <p>We create a supportive, inspirational environment that sparks curiosity and a lifelong passion for learning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Values Section -->
+<section id="core-values" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Core Values</h2>
+      <p class="lead">Principles that guide our academy every day.</p>
+    </div>
+
+    <div class="values-flow d-flex flex-wrap justify-content-center">
+      <!-- Value 1 -->
+      <div class="value-item text-center">
+        <div class="value-circle"><span>1</span></div>
+        <h5>Excellence</h5>
+        <p>We strive for the highest standards in academics and character.</p>
+      </div>
+
+      <!-- Value 2 -->
+      <div class="value-item text-center">
+        <div class="value-circle"><span>2</span></div>
+        <h5>Integrity</h5>
+        <p>We uphold honesty, fairness, and strong moral principles.</p>
+      </div>
+
+      <!-- Value 3 -->
+      <div class="value-item text-center">
+        <div class="value-circle"><span>3</span></div>
+        <h5>Creativity</h5>
+        <p>We encourage innovation and imaginative problem-solving.</p>
+      </div>
+
+      <!-- Value 4 -->
+      <div class="value-item text-center">
+        <div class="value-circle"><span>4</span></div>
+        <h5>Respect</h5>
+        <p>We foster a culture of respect for self, others, and the environment.</p>
+      </div>
+
+      <!-- Value 5 -->
+      <div class="value-item text-center">
+        <div class="value-circle"><span>5</span></div>
+        <h5>Community</h5>
+        <p>We build strong bonds and contribute positively to society.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="academics-cta-section">
+  <div class="container">
+    <div class="cta-content d-flex flex-column align-items-center text-center">
+
+      <!-- Text -->
+      <div class="cta-text mb-4">
+        <h2>Give Your Child the Best Start in Life</h2>
+        <p>
+          Enroll your child at EKMA today and provide a nurturing, creative, and academically excellent environment
+          from Day Care through Primary School. Our expert educators ensure every child thrives and grows confidently.
+        </p>
+      </div>
+
+      <!-- Button -->
+      <div>
+        <a href="admission.html" class="cta-button">
+          Enroll Now
+          <i class="bi bi-arrow-right-short"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- EKMA Footer -->
+<footer class="ekma-footer">
+<!-- Subscribe / Newsletter Section -->
+<div class="footer-subscribe">
+  <div class="container text-center">
+    <h3 class="footer-subscribe-title">Stay updated with Ekma</h3>
+    <p class="footer-subscribe-text">
+      Subscribe to our newsletter for the latest news, events, and updates.
+    </p>
+    <form class="subscribe-form" onsubmit="event.preventDefault(); showModal();">
+      <input type="email" id="subscribe-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div id="subscribeModal" class="modal-overlay">
+  <div class="modal-box">
+    <h4>Subscription Successful</h4>
+    <p>Thank you for subscribing! We’ll keep you updated.</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+
+  <!-- Main Footer Content -->
+  <div class="footer-main">
+    <div class="container">
+      <div class="row gy-4">
+<!-- Logo & About -->
+<div class="col-md-4">
+  <div class="footer-logo">
+    <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="logo-img">
+    <p>
+      EXCELLENT KIDDIES MONTESSORI ACADEMY nurtures young minds through quality education, 
+      creativity, and character‑building activities. We provide a safe and inspiring environment 
+      where children are guided to develop strong academic foundations, moral values, and social skills.
+    </p>
+  </div>
+</div>
+<!-- Quick Links -->
+<div class="col-md-2">
+  <h5>Quick Links</h5>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="History.html">History</a></li>
+    <li><a href="Admission.html">Admissions</a></li>
+    <li><a href="Activities.html">Activities</a></li>
+    <li><a href="news-event.html">News & Events</a></li>
+     <li><a href="Achievements.html">Achievements</a></li>
+  </ul>
+</div>
+
+
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Plot A2 Action Area, Behind Federal Government Girls College Bwari. Plot 217 Kuduru Layout Behind Nigerian Law School, Off Kuduru Road Bwari FCT</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 806 0220 612</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 905 4146 797</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@gmail.com</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@yahoo.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+<!-- Bottom Footer -->
+<div class="footer-bottom">
+  <p>
+    &copy; 2026 Excellent Kiddies Montessori Academy. All Rights Reserved. 
+    Website Built By 
+    <a href="https://sophajs.com/" class="footer-credit-link" target="_blank">
+      Sophajs Global Tech
+    </a>
+  </p>
+</div>
+
+
+</footer>
+
+<script>
+  function showModal() {
+    const emailInput = document.getElementById("subscribe-email");
+    if (emailInput.value) {
+      // Show modal
+      document.getElementById("subscribeModal").style.display = "flex";
+      // Clear input field
+      emailInput.value = "";
+    }
+  }
+
+  function closeModal() {
+    document.getElementById("subscribeModal").style.display = "none";
+  }
+
+  // Optional: close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById("subscribeModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+<script>
+  window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+  });
+</script>
+
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

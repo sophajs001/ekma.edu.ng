@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excellent Kiddies Montessori Academy | EKMA</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap CSS (in <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<!-- Announcement Modal -->
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md"><!-- compact modal -->
+    <div class="modal-content shadow-sm rounded-3">
+
+      <!-- Header -->
+      <div class="modal-header border-0">
+        <h6 class="modal-title fw-bold text-success ms-2" id="announcementModalLabel">Announcements</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <!-- Announcement List -->
+        <ul class="list-group list-group-flush small mb-3">
+          <li class="list-group-item">Admissions ongoing for 2026/2027 session</li>
+          <li class="list-group-item">Common Entrance update: Forms available</li>
+          <li class="list-group-item">Resumption date: 15th March 2026</li>
+          <li class="list-group-item">Exam timetable release soon</li>
+        </ul>
+
+        <!-- Newsletter Section -->
+        <div class="text-start mb-3 ms-2">
+          <p class="fw-semibold mb-2">Full Newsletter Available</p>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             class="btn btn-success btn-sm" 
+             download>
+            Download <i class="bi bi-download"></i>
+          </a>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             target="_blank" 
+             class="btn btn-outline-primary btn-sm ms-2">
+            View Online <i class="bi bi-eye"></i>
+          </a>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="border-top pt-3 ms-2">
+          <h6 class="fw-semibold mb-2">Other Resources</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="ASSETS/SchoolFeesBreakdown.pdf" class="btn btn-outline-secondary btn-sm" download>
+              School Fees Breakdown
+            </a>
+            <a href="ASSETS/ListOfBooks.pdf" class="btn btn-outline-secondary btn-sm" download>
+              List of Books
+            </a>
+            <a href="ASSETS/BusRoutingPrices.pdf" class="btn btn-outline-secondary btn-sm" download>
+              Bus Routing Prices
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer border-0 justify-content-center">
+        <small class="text-danger fw-semibold text-center">
+          *Announcements and resources are updated regularly.*
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+<body>
+
+ <!-- Top Header Bar -->
+<div class="header-top">
+  <div class="container-fluid p-0"> <!-- remove container padding -->
+    <div class="row m-0 align-items-center"> <!-- remove row margin -->
+      
+    <!-- Left: Follow Us -->
+<div class="col-6 d-flex align-items-center header-left">
+  <div class="follow-us ms-3">
+    <span>Follow Us:</span>
+    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+  </div>
+</div>
+
+      <!-- Right: Contact Info -->
+      <div class="col-6 d-flex align-items-center justify-content-end header-right">
+        <div class="contact-info me-3">
+          <span><i class="bi bi-geo-alt"></i> Bwari, Abuja FCT</span>
+          <span><i class="bi bi-envelope"></i> excellentkmontacademy@gmail.com</span>
+          <span><i class="bi bi-telephone"></i> +234 806 0220 612, +234 905 4146 797 </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="me-2 rounded-circle" height="45" width="45">
+      <span class="fw-bold fs-6">EKMA</span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" 
+            aria-label="Toggle navigation">
+      <span class="hamburger"><i class="bi bi-list"></i></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+              <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
+              <li><a class="dropdown-item" href="Mission-vision.html">Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="Facilities.html">Facilities Overview</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="primary-section.html">Nursery / Primary Section</a></li>
+              <li><a class="dropdown-item" href="secondary-section.html">Secondary Section</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Achievements.html">Achievements</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#announcementModal">Announcements</a></li>
+              <li><a class="dropdown-item" href="news-events.html">News & Events</a></li>
+              <li><a class="dropdown-item" href="photo-gallery.html">Photo Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+<!-- Bell Notification -->
+<li class="nav-item ms-lg-3">
+  <a href="#" class="nav-link position-relative bell-link" data-bs-toggle="modal" data-bs-target="#announcementModal">
+    <i class="bi bi-bell-fill bell-icon"></i>
+    <span class="badge bell-badge">1</span>
+  </a>
+</li>
+
+        </ul>
+
+        <!-- Social Media Icons (mobile only) -->
+        <div class="mt-3 text-center d-lg-none d-block">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- News & Events Hero -->
+<section class="news-hero">
+  <img src="GRAPHICS/news-hero.jpg" alt="News Hero Image" class="news-hero-img">
+  <div class="news-hero-content text-center">
+    <h1 class="news-hero-title fw-bold">News & Events</h1>
+    <p class="news-hero-subtext lead">Catch up on EKMA’s latest happenings</p>
+  </div>
+</section>
+
+
+<!-- Announcement Bar -->
+<div class="announcement-bar bg-warning text-dark py-2" 
+     data-bs-toggle="modal" data-bs-target="#announcementModal">
+  <div class="scrolling-text">
+    📢 Admissions ongoing | Common Entrance update | Resumption date announced | Notifications......click to view
+  </div>
+</div>
+
+<!-- Announcement Modal -->
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="announcementModalLabel">Announcements Summary</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">📌 Admissions ongoing for 2026/2027 session</li>
+          <li class="list-group-item">📌 Common Entrance update: Forms available</li>
+          <li class="list-group-item">📌 Resumption date: 15th March 2026</li>
+          <li class="list-group-item">📌 Notifications: Exam timetable release soon</li>
+        </ul>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- News & Events Section -->
+<section id="news-events" class="py-5">
+  <div class="container">
+    <div class="row">
+
+      
+    <!-- First Page (6 cards) -->
+    <div class="row page" id="page1">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="news-card">
+          <div class="news-img-wrapper position-relative">
+            <img src="GRAPHICS/Ekma image 3.jpg" alt="Inauguration" class="news-img img-fluid rounded" loading="lazy">
+            <div class="news-date"><span class="day">04</span><span class="month">Oct</span><span class="year">2024</span></div>
+          </div>
+          <div class="news-content mt-3">
+            <h4 class="fw-bold">Inauguration of 2024/2025 Session</h4>
+            <p class="text-muted">EKMA Media Team</p>
+            <a href="#" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="news-card">
+          <div class="news-img-wrapper position-relative">
+            <img src="GRAPHICS/ekma lab test.jpg" alt="Community Service" class="news-img img-fluid rounded" loading="lazy">
+            <div class="news-date"><span class="day">14</span><span class="month">Oct</span><span class="year">2024</span></div>
+          </div>
+          <div class="news-content mt-3">
+            <h4 class="fw-bold">Community Service Day</h4>
+            <p class="text-muted">EKMA Media Team</p>
+            <a href="#" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="news-card">
+          <div class="news-img-wrapper position-relative">
+            <img src="GRAPHICS/Ekma image 2.jpg" alt="Sports Day" class="news-img img-fluid rounded" loading="lazy">
+            <div class="news-date"><span class="day">20</span><span class="month">Nov</span><span class="year">2024</span></div>
+          </div>
+          <div class="news-content mt-3">
+            <h4 class="fw-bold">Sports Day Highlights</h4>
+            <p class="text-muted">EKMA Media Team</p>
+            <a href="#" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="news-card">
+          <div class="news-img-wrapper position-relative">
+            <img src="GRAPHICS/Ekma image 4.jpg" alt="Science Fair" class="news-img img-fluid rounded" loading="lazy">
+            <div class="news-date"><span class="day">05</span><span class="month">Dec</span><span class="year">2024</span></div>
+          </div>
+          <div class="news-content mt-3">
+            <h4 class="fw-bold">Annual Science Fair</h4>
+            <p class="text-muted">EKMA Media Team</p>
+            <a href="#" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="news-card">
+          <div class="news-img-wrapper position-relative">
+            <img src="GRAPHICS/Ekma image 5.jpg" alt="Cultural Day" class="news-img img-fluid rounded" loading="lazy">
+            <div class="news-date"><span class="day">12</span><span class="month">Jan</span><span class="year">2025</span></div>
+          </div>
+          <div class="news-content mt-3">
+            <h4 class="fw-bold">Cultural Day Celebration</h4>
+            <p class="text-muted">EKMA Media Team</p>
+            <a href="#" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="news-card">
+          <div class="news-img-wrapper position-relative">
+            <img src="GRAPHICS/Ekma image 6.jpg" alt="Graduation" class="news-img img-fluid rounded" loading="lazy">
+            <div class="news-date"><span class="day">28</span><span class="month">Feb</span><span class="year">2025</span></div>
+          </div>
+          <div class="news-content mt-3">
+            <h4 class="fw-bold">Graduation Ceremony</h4>
+            <p class="text-muted">EKMA Media Team</p>
+            <a href="#" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Page (hidden initially) -->
+    <div class="row page d-none" id="page2">
+      <!-- Card 7 -->
+      <div class="col-md-4 mb-4">
+        <div class="news-card">
+          <div class="news-img-wrapper position-relative">
+            <img src="GRAPHICS/Ekma image 7.jpg" alt="Debate Competition" class="news-img img-fluid rounded" loading="lazy">
+            <div class="news-date"><span class="day">10</span><span class="month">Mar</span><span class="year">2025</span></div>
+          </div>
+          <div class="news-content mt-3">
+            <h4 class="fw-bold">Debate Competition</h4>
+            <p class="text-muted">EKMA Media Team</p>
+            <a href="#" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-md-4 mb-4">
+        <div class="news-card">
+          <div class="news-img-wrapper position-relative">
+            <img src="GRAPHICS/Ekma image 8.jpg" alt="Music Festival" class="news-img img-fluid rounded" loading="lazy">
+            <div class="news-date"><span class="day">22</span><span class="month">Apr</span><span class="year">2025</span></div>
+          </div>
+          <div class="news-content mt-3">
+            <h4 class="fw-bold">Music Festival</h4>
+            <p class="text-muted">EKMA Media Team</p>
+            <a href="#" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="col-md-4 mb-4">
+        <div class="news-card">
+          <div class="news-img-wrapper position-relative">
+            <img src="GRAPHICS/Ekma image 9.jpg" alt="Art Exhibition" class="news-img img-fluid rounded" loading="lazy">
+            <div class="news-date"><span class="day">30</span><span class="month">May</span><span class="year">2025</span></div>
+          </div>
+          <div class="news-content mt-3">
+            <h4 class="fw-bold">Art Exhibition</h4>
+            <p class="text-muted">EKMA Media Team</p>
+            <a href="#" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="News pagination" class="mt-5">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="#" onclick="showPage(1)">1</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="showPage(2)">2</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="showPage(2)">Next</a></li>
+      </ul>
+    </nav>
+  </div> <!-- Close container -->
+</section> <!-- Close section -->
+
+
+
+
+<section id="upcoming-events" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color:#2d6a4f;">Upcoming Events</h2>
+      <p class="lead">Mark your calendars for EKMA’s key dates.</p>
+    </div>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="fw-semibold">School Resumption</h5>
+          <p class="mb-0 text-muted">Official resumption for the 2026/2027 academic session.</p>
+        </div>
+        <span class="badge bg-success rounded-pill">15 Mar 2026</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="fw-semibold">Inter-House Sports</h5>
+          <p class="mb-0 text-muted">Annual sports competition showcasing talent and teamwork.</p>
+        </div>
+        <span class="badge bg-success rounded-pill">28 Mar 2026</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="fw-semibold">Cultural Day</h5>
+          <p class="mb-0 text-muted">A celebration of diversity, creativity, and tradition.</p>
+        </div>
+        <span class="badge bg-success rounded-pill">10 Apr 2026</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="ekma-footer">
+   
+
+<!-- EKMA Footer -->
+<footer class="ekma-footer">
+
+  <!-- Subscribe / Newsletter Section -->
+  <div class="footer-subscribe">
+    <div class="container text-center">
+      <h3>Stay Updated with EKMA</h3>
+      <p>Subscribe to our newsletter for the latest news, events, and updates.</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Footer Content -->
+  <div class="footer-main">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Logo & About -->
+        <div class="col-md-4">
+          <div class="footer-logo">
+            <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="logo-img">
+            <p>EXCELLENT KIDDIES MONTESSORI ACADEMY nurtures young minds through quality education, creativity, and character-building activities.</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">News & Events</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Plot A2 Action Area, Behind Federal Government Girls College Bwari. Plot 217 Kuduru Layout Behind Nigerian Law School, Off Kuduru Road Bwari FCT</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 806 0220 612</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 905 4146 797</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@gmail.com</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@yahoo.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- Bottom Footer -->
+<div class="footer-bottom">
+  <p>
+    &copy; 2026 Excellent Kiddies Montessori Academy. All Rights Reserved. 
+    Website Built By Sophajs Global Tech.
+  </p>
+</div>
+
+</footer>
+
+</footer>
+
+<!-- Scripts -->
+<script>
+  function showPage(pageNumber) {
+    document.querySelectorAll('.page').forEach(page => page.classList.add('d-none'));
+    document.getElementById('page' + pageNumber).classList.remove('d-none');
+  }
+</script>
+
+
+   
+<script>
+  window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+  });
+</script>
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

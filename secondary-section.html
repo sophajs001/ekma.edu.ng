@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excellent Kiddies Montessori Academy | EKMA</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top Header Bar -->
+  <div class="header-top">
+    <div class="container-fluid p-0">
+      <div class="row m-0 align-items-center">
+        
+        <!-- Left: Follow Us -->
+        <div class="col-6 d-flex align-items-center header-left">
+          <div class="follow-us ms-3">
+            <span>Follow Us:</span>
+            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="col-6 d-flex align-items-center justify-content-end header-right">
+          <div class="contact-info me-3">
+            <span><i class="bi bi-geo-alt"></i> Bwari, Abuja FCT</span>
+            <span><i class="bi bi-envelope"></i> excellentkmontacademy@gmail.com</span>
+            <span><i class="bi bi-telephone"></i> +234 806 0220 612, +234 905 4146 797 </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="me-2 rounded-circle" height="45" width="45">
+      <span class="fw-bold fs-6">EKMA</span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" 
+            aria-label="Toggle navigation">
+      <span class="hamburger"><i class="bi bi-list"></i></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+              <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
+              <li><a class="dropdown-item" href="Mission-vision.html">Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="Facilities.html">Facilities Overview</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="primary-section.html">Nursery / Primary Section</a></li>
+              <li><a class="dropdown-item" href="secondary-section.html">Secondary Section</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Achievements.html">Achievements</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#announcementModal">Announcements</a></li>
+              <li><a class="dropdown-item" href="news-events.html">News & Events</a></li>
+              <li><a class="dropdown-item" href="photo-gallery.html">Photo Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+<!-- Bell Notification -->
+<li class="nav-item ms-lg-3">
+  <a href="#" class="nav-link position-relative bell-link" data-bs-toggle="modal" data-bs-target="#announcementModal">
+    <i class="bi bi-bell-fill bell-icon"></i>
+    <span class="badge bell-badge">1</span>
+  </a>
+</li>
+
+        </ul>
+
+        <!-- Social Media Icons (mobile only) -->
+        <div class="mt-3 text-center d-lg-none d-block">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+ <!-- Secondary Page Hero -->
+<section class="secondary-hero">
+  <img src="GRAPHICS/Ekma image 2.jpg" alt="Hero Image" class="secondary-hero-img">
+
+  <div class="secondary-hero-content text-center">
+    <h1 class="secondary-hero-title fw-bold">Your Secondary School Journey</h1>
+    <p class="secondary-hero-subtext lead">From Junior Secondary foundations to WAEC success</p>
+  </div>
+</section>
+<!-- Intro Section -->
+<section id="intro" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="intro-box">
+          <div class="intro-line"></div>
+          <div class="intro-text ps-4">
+            <p id="intro-paragraph" class="secondary-text">
+              Secondary school is a transformative stage in education, shaping students both academically and socially. 
+              At EKMA, learners gain not only knowledge but also vital life skills that prepare them for higher education 
+              and beyond. Our structured programs build confidence and responsibility, ensuring every child grows into a 
+              well‑rounded individual. With dedicated teachers and a nurturing environment, EKMA provides personalized 
+              guidance that helps students excel in WAEC and future pursuits. We emphasize character development alongside 
+              academics, giving learners the tools to thrive in society. Choosing EKMA means laying a strong foundation 
+              for lifelong success.
+            </p>
+            <span id="read-more" class="read-more">Read more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- School Journey Cards -->
+<section id="school-journey" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Explore the Stages</h2>
+    <p class="lead mb-5">Each stage is essential in shaping your future</p>
+
+    <div class="row g-4">
+      <!-- Junior Secondary -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img src="GRAPHICS/Ekma Image 4.jpg" class="card-img-top" alt="Junior Secondary Students">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Junior Secondary</h5>
+            <p class="card-text">
+              The first three years of secondary school.  
+              Focus on Mathematics, English, and Science.  
+              Builds literacy and numeracy skills.  
+              Introduces vocational and social studies.  
+              Prepares learners for senior classes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Senior Secondary -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img src="GRAPHICS/Ekma image 2.jpg" class="card-img-top" alt="Senior Secondary Students">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Senior Secondary</h5>
+            <p class="card-text">
+              The final three years of school.  
+              Students choose Science, Arts, or Commerce.  
+              Subjects deepen for career readiness.  
+              Builds discipline and responsibility.  
+              Prepares learners for external exams.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- External Examinations -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow border-0">
+          <img src="GRAPHICS/waec image.jpg" class="card-img-top" alt="External Exams">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">External Examinations</h5>
+            <p class="card-text">
+              WAEC and NECO are key assessments.  
+              They test mastery of chosen subjects.  
+              Results determine higher education entry.  
+              Success opens doors to careers.  
+              Marks the completion of secondary school.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div><!-- row -->
+  </div><!-- container -->
+</section>
+
+  </section>
+<section id="secondary-curriculum" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-4">Curriculum Overview: Junior & Senior Secondary</h2>
+
+    <!-- Secondary Curriculum Table -->
+    <div class="table-responsive mb-5">
+      <table class="table table-bordered text-center align-middle secondary-curriculum-table">
+        <thead style="background-color:#021b38; color:#fff;">
+          <tr>
+            <th>Level</th>
+            <th style="background-color:#21744f; color:#fff;">Core Subjects</th>
+            <th style="background-color:#021b38; color:#fff;">Electives / Streams</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Junior Secondary -->
+          <tr>
+            <td class="level-cell">Junior Secondary (JSS 1–3)</td>
+            <td style="text-align:justify;">
+              English Language, Mathematics, Basic Science & Technology, Social Studies, Civic Education, Computer Studies, Physical & Health Education, Religious Studies (CRS / IRS).
+            </td>
+            <td style="text-align:justify;">
+              Introductory Technology, Creative Arts, Business Studies, Agricultural Science, French.
+            </td>
+          </tr>
+
+          <!-- Senior Secondary Science -->
+          <tr>
+            <td class="level-cell">Senior Secondary – Science Stream</td>
+            <td style="text-align:justify;">
+              English Language, Mathematics, Biology, Chemistry, Physics, Further Mathematics, Computer Science, Religious Studies (CRS / IRS).
+            </td>
+            <td style="text-align:justify;">
+              Agricultural Science, Geography, Technical Drawing, Health Science.
+            </td>
+          </tr>
+
+          <!-- Senior Secondary Arts / Commercial -->
+          <tr>
+            <td class="level-cell">Senior Secondary – Arts & Commercial Stream</td>
+            <td style="text-align:justify;">
+              English Language, Mathematics, Literature in English, Government, Economics, CRS / IRS, Civic Education.
+            </td>
+            <td style="text-align:justify;">
+              Commerce, Accounting, Geography, Fine Arts, History.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Extracurricular Activities Table -->
+    <h3 class="fw-bold text-center text-success mb-3">Extracurricular Activities (Secondary)</h3>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center align-middle secondary-curriculum-table">
+        <thead style="background-color:#21744f; color:#fff;">
+          <tr>
+            <th>Category</th>
+            <th style="background-color:#021b38; color:#fff;">Activities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="level-cell">Sports</td>
+            <td style="text-align:justify;">
+              Football, Basketball, Volleyball, Athletics, Table Tennis.
+            </td>
+          </tr>
+          <tr>
+            <td class="level-cell">Clubs</td>
+            <td style="text-align:justify;">
+              Debate Club, ICT Club, Press Club, Science Club, Drama Society.
+            </td>
+          </tr>
+          <tr>
+            <td class="level-cell">Arts & Culture</td>
+            <td style="text-align:justify;">
+              Music Band, Dance, Fine Arts, Cultural Day Activities.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Note -->
+    <div class="text-center mt-4">
+      <p class="small text-muted">
+        *Secondary curriculum is divided into Science, Arts/Commercial, and Social Science streams. 
+        Religious Studies (CRS/IRS) is offered to accommodate Christian and Muslim students.*
+      </p>
+    </div>
+  </div>
+</section>
+
+  
+<section class="faq-section">
+  <div class="container-fluid p-0">
+    <div class="faq-content row gx-5">
+
+      <!-- LEFT COLUMN -->
+      <div class="col-lg-6">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">What are the admission requirements?</button>
+            <div class="faq-answer">
+              <p>Students must meet our academic prerequisites and submit required documents including birth certificate and past academic records.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is there a uniform policy?</button>
+            <div class="faq-answer">
+              <p>Yes, all students are required to wear the school uniform, details of which are provided upon admission.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="col-lg-6">
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">What extracurricular activities are offered?</button>
+            <div class="faq-answer">
+              <p>We offer sports, music, art, and STEM clubs to enrich the students’ learning experience.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How can parents stay involved in school activities?</button>
+            <div class="faq-answer">
+              <p>Parents can join our PTA, attend school events, and participate in volunteer programs.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What support services are available for students?</button>
+            <div class="faq-answer">
+              <p>We provide counseling, tutoring, and mentorship programs to support each student’s development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="academics-cta-section">
+  <div class="container">
+    <div class="cta-content d-flex flex-column align-items-center text-center">
+
+      <!-- Text -->
+      <div class="cta-text mb-4">
+        <h2>Give Your Child the Best Start in Life</h2>
+        <p>
+          Enroll your child at EKMA today and provide a nurturing, creative, and academically excellent environment
+          from Day Care through Primary School. Our expert educators ensure every child thrives and grows confidently.
+        </p>
+      </div>
+
+      <!-- Button -->
+      <div>
+        <a href="admission.html" class="cta-button">
+          Enroll Now
+          <i class="bi bi-arrow-right-short"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- EKMA Footer -->
+<footer class="ekma-footer">
+
+  <!-- Subscribe / Newsletter Section -->
+  <div class="footer-subscribe">
+    <div class="container text-center">
+      <h3>Stay Updated with EKMA</h3>
+      <p>Subscribe to our newsletter for the latest news, events, and updates.</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Footer Content -->
+  <div class="footer-main">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Logo & About -->
+        <div class="col-md-4">
+          <div class="footer-logo">
+            <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="logo-img">
+            <p>EXCELLENT KIDDIES MONTESSORI ACADEMY nurtures young minds through quality education, creativity, and character-building activities.</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">News & Events</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Plot A2 Action Area, Behind Federal Government Girls College Bwari. Plot 217 Kuduru Layout Behind Nigerian Law School, Off Kuduru Road Bwari FCT</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 806 0220 612</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 905 4146 797</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@gmail.com</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@yahoo.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- Bottom Footer -->
+<div class="footer-bottom">
+  <p>
+    &copy; 2026 Excellent Kiddies Montessori Academy. All Rights Reserved. 
+    Website Built By Sophajs Global Tech.
+  </p>
+</div>
+
+</footer>
+
+<script>
+  const introParagraph = document.getElementById("intro-paragraph");
+  const readMore = document.getElementById("read-more");
+
+  readMore.addEventListener("click", () => {
+    if (introParagraph.style.webkitLineClamp === "unset") {
+      introParagraph.style.webkitLineClamp = "6"; // collapse back to 6 lines
+      readMore.textContent = "Read more";
+    } else {
+      introParagraph.style.webkitLineClamp = "unset"; // expand fully
+      readMore.textContent = "Show less";
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+    // FAQ Accordion Toggle
+const faqItems = document.querySelectorAll(".faq-question");
+
+faqItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const currentlyActive = document.querySelector(".faq-question.active");
+    if(currentlyActive && currentlyActive !== item) {
+      currentlyActive.classList.remove("active");
+      currentlyActive.nextElementSibling.style.maxHeight = 0;
+    }
+
+    item.classList.toggle("active");
+    const answer = item.nextElementSibling;
+    if(item.classList.contains("active")) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = 0;
+    }
+  });
+});
+  </script>
+
+  
+<script>
+  window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+  });
+</script>
+</body>
+</html>

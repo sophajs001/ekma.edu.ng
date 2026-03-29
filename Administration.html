@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excellent Kiddies Montessori Academy | EKMA</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <!-- Top Header Bar -->
+<div class="header-top">
+  <div class="container-fluid p-0"> <!-- remove container padding -->
+    <div class="row m-0 align-items-center"> <!-- remove row margin -->
+      
+      <!-- Left: Follow Us -->
+      <div class="col-6 d-flex align-items-center header-left">
+        <div class="follow-us ms-3">
+          <span>Follow Us:</span>
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Right: Contact Info -->
+      <div class="col-6 d-flex align-items-center justify-content-end header-right">
+        <div class="contact-info me-3">
+          <span><i class="bi bi-geo-alt"></i> Bwari, Abuja FCT</span>
+          <span><i class="bi bi-envelope"></i> excellentkmontacademy@gmail.com</span>
+          <span><i class="bi bi-telephone"></i> +234 806 0220 612, +234 905 4146 797 </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="me-2 rounded-circle" height="45" width="45">
+      <span class="fw-bold fs-6">EKMA</span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" 
+            aria-label="Toggle navigation">
+      <span class="hamburger"><i class="bi bi-list"></i></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+              <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
+              <li><a class="dropdown-item" href="Mission-vision.html">Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="Facilities.html">Facilities Overview</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="primary-section.html">Nursery / Primary Section</a></li>
+              <li><a class="dropdown-item" href="secondary-section.html">Secondary Section</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Achievements.html">Achievements</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#announcementModal">Announcements</a></li>
+              <li><a class="dropdown-item" href="news-events.html">News & Events</a></li>
+              <li><a class="dropdown-item" href="photo-gallery.html">Photo Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+<!-- Bell Notification -->
+<li class="nav-item ms-lg-3">
+  <a href="#" class="nav-link position-relative bell-link" data-bs-toggle="modal" data-bs-target="#announcementModal">
+    <i class="bi bi-bell-fill bell-icon"></i>
+    <span class="badge bell-badge">1</span>
+  </a>
+</li>
+
+        </ul>
+
+        <!-- Social Media Icons (mobile only) -->
+        <div class="mt-3 text-center d-lg-none d-block">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Administration Hero -->
+<section class="administration-hero">
+  <!-- Background Image -->
+  <img src="GRAPHICS/ekma group image 2.jpg" alt="Administration Overview" class="administration-hero-img">
+
+  <!-- Content Overlay -->
+  <div class="administration-hero-content">
+    <h1 class="administration-hero-title">Administration & Leadership</h1>
+    <p class="administration-hero-subtext">
+     Our administration team ensures excellence and nurtures a thriving learning environment.
+    </p>
+  </div>
+</section>
+<!-- Proprietress Message Section -->
+<section id="proprietress-message" class="proprietress-section py-5 bg-light">
+  <div class="container px-4 px-md-5">
+    <div class="row align-items-center g-4">
+
+      <!-- Proprietress Text -->
+      <div class="col-md-6">
+        <div class="proprietress-text-block">
+          <h3 class="proprietress-heading">A Message from Our Proprietress</h3>
+          <p class="proprietress-paragraph lead mt-3">
+            From humble beginnings, Excellent Kiddies Montessori Academy was built on faith, perseverance, and a vision for excellence. We believe education is more than academics, it is about shaping lives, building character, and inspiring dreams. Every child deserves a nurturing environment where curiosity is celebrated and resilience is cultivated.
+          </p>
+          <p class="proprietress-paragraph lead mt-3">
+            To fellow school owners, let us remain goal‑oriented and steadfast in raising the standard of education with passion and integrity. Together, we can create institutions that not only teach but transform, leaving a legacy of excellence for generations to come.
+          </p>
+          <p class="proprietress-signature fw-semibold mt-3">— Mrs. Christy Imudia, Proprietress</p>
+        </div>
+      </div>
+
+      <!-- Proprietress Image -->
+      <div class="col-md-6 text-center">
+        <img src="GRAPHICS/EKMA PROPRITOR.jpg" alt="Proprietress Image" class="proprietress-image img-fluid rounded shadow" style="max-height:400px; object-fit:cover;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+   ADMINISTRATION SECTION
+=========================== -->
+<section id="administration" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Administration & Leadership</h2>
+      <p class="lead">Meet the leaders guiding our institution.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Proprietress -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="GRAPHICS/EKMA PROPRITOR.jpg" alt="Proprietress" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mrs. Christy Imudia</h5>
+          <p class="admin-role">Proprietress</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mrs. Christy Imudia"
+            data-role="Proprietress"
+            data-img="GRAPHICS/EKMA PROPRITOR.jpg"
+            data-bio="Founder of EKMA, with a background in Early Childhood Education and over 25 years of experience in school leadership.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Director: Mr. Jude Romanus -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="GRAPHICS/EKMA director 2.jpg" alt="Director" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mr. Jude Romanus</h5>
+          <p class="admin-role">Director</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mr. Jude Romanus"
+            data-role="Director"
+            data-img="GRAPHICS/EKMA director 2.jpg"
+            data-bio="Experienced educational leader serving as Director at EKMA.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Director: Dr (Mrs) Constance Romanus -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="GRAPHICS/EKMA Director.jpg" alt="Director" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Dr (Mrs) Constance Romanus</h5>
+          <p class="admin-role">Director</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Dr (Mrs) Constance Romanus"
+            data-role="Director"
+            data-img="GRAPHICS/EKMA Director.jpg"
+            data-bio="Dedicated Director with strong background in education and administration.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Director: Mr. Imudia Graham -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="images/imudia-graham.jpg" alt="Director" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mr. Imudia Graham</h5>
+          <p class="admin-role">Director</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mr. Imudia Graham"
+            data-role="Director"
+            data-img="images/imudia-graham.jpg"
+            data-bio="Director at EKMA, contributing to strategic growth and leadership.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Principal -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="images/principal.jpg" alt="Principal" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mr. Evayomah O.</h5>
+          <p class="admin-role">Principal</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mr. Evayomah O."
+            data-role="Principal"
+            data-img="images/principal.jpg"
+            data-bio="M.Ed in Educational Leadership, 18 years of experience in school administration.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Vice Principal -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="GRAPHICS/ekma vice principal.jpeg" alt="Vice Principal" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mr. Gbenga Jatto</h5>
+          <p class="admin-role">Vice Principal</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mr. Gbenga Jatto"
+            data-role="Vice Principal"
+            data-img="GRAPHICS/ekma vice principal.jpeg"
+            data-bio="Results-driven educational leader with 29 years in teaching and administration.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Assistant Head of School -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="GRAPHICS/ekma assistant head of school image.jpeg" alt="Assistant Head of School" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mrs. Henry Cynthia</h5>
+          <p class="admin-role">Assistant Head of School</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mrs. Henry Cynthia"
+            data-role="Assistant Head of School"
+            data-img="GRAPHICS/ekma assistant head of school image.jpeg"
+            data-bio="Trained teacher with 11 years of experience, passionate about student growth and continuous learning.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- HOD Language & Humanities -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="GRAPHICS/ekma HOD landuage and Humanities.jpeg" alt="Head of Language & Humanities" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mr. Yakubu Himi</h5>
+          <p class="admin-role">Head of Language & Humanities</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mr. Yakubu Himi"
+            data-role="Head of Language & Humanities"
+            data-img="GRAPHICS/ekma HOD landuage and Humanities.jpeg"
+            data-bio="Expert in curriculum development, language instruction, and cultural studies.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Head of Science -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="GRAPHICS/ekma head of science of department image.jpeg" alt="Head of Science Department" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mrs. Fasuyi Ayobola</h5>
+          <p class="admin-role">Head of Science Department</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mrs. Fasuyi Ayobola"
+            data-role="Head of Science Department"
+            data-img="GRAPHICS/ekma head of science of department image.jpeg"
+            data-bio="Dedicated to academic excellence and digital innovation, experienced in integrated science and ICT curricula.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Head of ICT -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="images/ict.jpg" alt="ICT Head" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mr. Efosa O.</h5>
+          <p class="admin-role">Head of ICT Department</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mr. Efosa O."
+            data-role="Head of ICT Department"
+            data-img="images/ict.jpg"
+            data-bio="B.Sc in Computer Science, 10 years of experience in ICT education. Leads coding, robotics, and digital literacy programs.">
+            View Profile
+          </button>
+        </div>
+      </div>
+      <!-- Accountant -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="GRAPHICS/ekma accountant  & admin image.jpeg" alt="Accountant" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mrs. Atamewan Ladi</h5>
+          <p class="admin-role">Accountant</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mrs. Atamewan Ladi"
+            data-role="Accountant"
+            data-img="GRAPHICS/ekma accountant  & admin image.jpeg"
+            data-bio="Results-driven accountant with expertise in financial reporting, budgeting, and tax compliance.">
+            View Profile
+          </button>
+        </div>
+      </div>
+
+      <!-- Administrative Officer -->
+      <div class="col-md-4">
+        <div class="admin-card shadow-sm h-100 text-center">
+          <img src="GRAPHICS/Ekma image 2.jpg" alt="Admin Officer" class="admin-img rounded-circle mx-auto mt-3">
+          <h5 class="admin-name">Mrs. Linda White</h5>
+          <p class="admin-role">Administrative Officer</p>
+          <button class="btn admin-btn" data-bs-toggle="modal" data-bs-target="#profileModal"
+            data-name="Mrs. Linda White"
+            data-role="Administrative Officer"
+            data-img="GRAPHICS/Ekma image 2.jpg"
+            data-bio="B.Sc in Business Administration, 14 years of experience in school operations. Handles daily management, student services, and institutional coordination.">
+            View Profile
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <!-- Close Button -->
+      <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+      <!-- Profile Image -->
+      <img id="modalImg" src="" alt="Profile Image" 
+           class="rounded-circle mb-3 d-block mx-auto" 
+           style="width:180px;height:180px;object-fit:cover;">
+      <!-- Profile Info -->
+      <h4 id="modalName" class="fw-bold"></h4>
+      <p id="modalRole" class="text-muted"></p>
+      <p id="modalBio" class="mt-3"></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- EKMA Footer -->
+<footer class="ekma-footer">
+<!-- Subscribe / Newsletter Section -->
+<div class="footer-subscribe">
+  <div class="container text-center">
+    <h3 class="footer-subscribe-title">Stay updated with Ekma</h3>
+    <p class="footer-subscribe-text">
+      Subscribe to our newsletter for the latest news, events, and updates.
+    </p>
+    <form class="subscribe-form" onsubmit="event.preventDefault(); showModal();">
+      <input type="email" id="subscribe-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div id="subscribeModal" class="modal-overlay">
+  <div class="modal-box">
+    <h4>Subscription Successful</h4>
+    <p>Thank you for subscribing! We’ll keep you updated.</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+
+  <!-- Main Footer Content -->
+  <div class="footer-main">
+    <div class="container">
+      <div class="row gy-4">
+<!-- Logo & About -->
+<div class="col-md-4">
+  <div class="footer-logo">
+    <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="logo-img">
+    <p>
+      EXCELLENT KIDDIES MONTESSORI ACADEMY nurtures young minds through quality education, 
+      creativity, and character‑building activities. We provide a safe and inspiring environment 
+      where children are guided to develop strong academic foundations, moral values, and social skills.
+    </p>
+  </div>
+</div>
+<!-- Quick Links -->
+<div class="col-md-2">
+  <h5>Quick Links</h5>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="History.html">History</a></li>
+    <li><a href="Admission.html">Admissions</a></li>
+    <li><a href="Activities.html">Activities</a></li>
+    <li><a href="news-event.html">News & Events</a></li>
+     <li><a href="Achievements.html">Achievements</a></li>
+  </ul>
+</div>
+
+
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Plot A2 Action Area, Behind Federal Government Girls College Bwari. Plot 217 Kuduru Layout Behind Nigerian Law School, Off Kuduru Road Bwari FCT</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 806 0220 612</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 905 4146 797</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@gmail.com</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@yahoo.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+<!-- Bottom Footer -->
+<div class="footer-bottom">
+  <p>
+    &copy; 2026 Excellent Kiddies Montessori Academy. All Rights Reserved. 
+    Website Built By 
+    <a href="https://sophajs.com/" class="footer-credit-link" target="_blank">
+      Sophajs Global Tech
+    </a>
+  </p>
+</div>
+
+
+</footer>
+
+
+
+<script>
+  function showModal() {
+    const emailInput = document.getElementById("subscribe-email");
+    if (emailInput.value) {
+      // Show modal
+      document.getElementById("subscribeModal").style.display = "flex";
+      // Clear input field
+      emailInput.value = "";
+    }
+  }
+
+  function closeModal() {
+    document.getElementById("subscribeModal").style.display = "none";
+  }
+
+  // Optional: close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById("subscribeModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+<script>
+  // Get the modal element
+  const profileModal = document.getElementById('profileModal');
+
+  // Listen for when the modal is about to be shown
+  profileModal.addEventListener('show.bs.modal', event => {
+    // Button that triggered the modal
+    const button = event.relatedTarget;
+
+    // Extract info from data-* attributes
+    const name = button.getAttribute('data-name');
+    const role = button.getAttribute('data-role');
+    const img = button.getAttribute('data-img');
+    const bio = button.getAttribute('data-bio');
+
+    // Update modal content
+    document.getElementById('modalName').innerText = name;
+    document.getElementById('modalRole').innerText = role;
+    document.getElementById('modalImg').src = img;
+    document.getElementById('modalBio').innerText = bio;
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+  });
+</script>
+
+  <script>
+    // Offcanvas toggle
+    const offcanvasNav = document.getElementById('offcanvasNav');
+    const toggler = document.querySelector('.navbar-toggler');
+    const hamburger = toggler.querySelector('.hamburger');
+    const closeIcon = toggler.querySelector('.close');
+
+    offcanvasNav.addEventListener('show.bs.offcanvas', () => {
+      hamburger.classList.add('d-none');
+      closeIcon.classList.remove('d-none');
+    });
+
+    offcanvasNav.addEventListener('hidden.bs.offcanvas', () => {
+      hamburger.classList.remove('d-none');
+      closeIcon.classList.add('d-none');
+    });
+    
+</script>
+</body>
+</html>
+

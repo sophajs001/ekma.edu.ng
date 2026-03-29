@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excellent Kiddies Montessori Academy | EKMA</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Announcement Modal -->
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md"><!-- compact modal -->
+    <div class="modal-content shadow-sm rounded-3">
+
+      <!-- Header -->
+      <div class="modal-header border-0">
+        <h6 class="modal-title fw-bold text-success ms-2" id="announcementModalLabel">Announcements</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <!-- Announcement List -->
+        <ul class="list-group list-group-flush small mb-3">
+          <li class="list-group-item">Admissions ongoing for 2026/2027 session</li>
+          <li class="list-group-item">Common Entrance update: Forms available</li>
+          <li class="list-group-item">Resumption date: 15th March 2026</li>
+          <li class="list-group-item">Exam timetable release soon</li>
+        </ul>
+
+        <!-- Newsletter Section -->
+        <div class="text-start mb-3 ms-2">
+          <p class="fw-semibold mb-2">Full Newsletter Available</p>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             class="btn btn-success btn-sm" 
+             download>
+            Download <i class="bi bi-download"></i>
+          </a>
+          <a href="ASSETS/SAMS WEBSITE CONTENT.pdf" 
+             target="_blank" 
+             class="btn btn-outline-primary btn-sm ms-2">
+            View Online <i class="bi bi-eye"></i>
+          </a>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="border-top pt-3 ms-2">
+          <h6 class="fw-semibold mb-2">Other Resources</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="ASSETS/SchoolFeesBreakdown.pdf" class="btn btn-outline-secondary btn-sm" download>
+              School Fees Breakdown
+            </a>
+            <a href="ASSETS/ListOfBooks.pdf" class="btn btn-outline-secondary btn-sm" download>
+              List of Books
+            </a>
+            <a href="ASSETS/BusRoutingPrices.pdf" class="btn btn-outline-secondary btn-sm" download>
+              Bus Routing Prices
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer border-0 justify-content-center">
+        <small class="text-danger fw-semibold text-center">
+          *Announcements and resources are updated regularly.*
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+<body>
+
+ <!-- Top Header Bar -->
+<div class="header-top">
+  <div class="container-fluid p-0"> <!-- remove container padding -->
+    <div class="row m-0 align-items-center"> <!-- remove row margin -->
+      
+    <!-- Left: Follow Us -->
+<div class="col-6 d-flex align-items-center header-left">
+  <div class="follow-us ms-3">
+    <span>Follow Us:</span>
+    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+  </div>
+</div>
+
+      <!-- Right: Contact Info -->
+      <div class="col-6 d-flex align-items-center justify-content-end header-right">
+        <div class="contact-info me-3">
+          <span><i class="bi bi-geo-alt"></i> Bwari, Abuja FCT</span>
+          <span><i class="bi bi-envelope"></i> excellentkmontacademy@gmail.com</span>
+          <span><i class="bi bi-telephone"></i> +234 806 0220 612, +234 905 4146 797 </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="me-2 rounded-circle" height="45" width="45">
+      <span class="fw-bold fs-6">EKMA</span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" 
+            aria-label="Toggle navigation">
+      <span class="hamburger"><i class="bi bi-list"></i></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+              <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
+              <li><a class="dropdown-item" href="Mission-vision.html">Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="Facilities.html">Facilities Overview</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="primary-section.html">Nursery / Primary Section</a></li>
+              <li><a class="dropdown-item" href="secondary-section.html">Secondary Section</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Achievements.html">Achievements</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#announcementModal">Announcements</a></li>
+              <li><a class="dropdown-item" href="news-events.html">News & Events</a></li>
+              <li><a class="dropdown-item" href="photo-gallery.html">Photo Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+<!-- Bell Notification -->
+<li class="nav-item ms-lg-3">
+  <a href="#" class="nav-link position-relative bell-link" data-bs-toggle="modal" data-bs-target="#announcementModal">
+    <i class="bi bi-bell-fill bell-icon"></i>
+    <span class="badge bell-badge">1</span>
+  </a>
+</li>
+
+        </ul>
+
+        <!-- Social Media Icons (mobile only) -->
+        <div class="mt-3 text-center d-lg-none d-block">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Achievements Hero -->
+<section class="achievements-hero">
+  <img src="GRAPHICS/ekma 20th Anniversary.jpg" alt="Achievements Hero Image" class="achievements-hero-img">
+
+  <div class="achievements-hero-content text-center">
+    <h1 class="achievements-hero-title fw-bold">Celebrating Our Achievements</h1>
+    <p class="achievements-hero-subtext lead">From academic excellence to community impact</p>
+   
+  </div>
+</section>
+
+<!-- Achievements Intro Section -->
+<section id="achievements-intro" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="achievements-intro-box">
+          <div class="achievements-intro-line"></div>
+          <div class="achievements-intro-text ps-4">
+            <p class="achievements-secondary-text">
+              At EKMA, achievements are more than milestones, they are stories of dedication, creativity, and resilience. 
+              Our students shine in academics, sports, arts, and service, proving that excellence comes in many forms. 
+              Each success reflects not only talent but also the values of hard work and community spirit. 
+              From WAEC distinctions to national competitions, from charity drives to leadership summits, 
+              EKMA’s achievements inspire pride and set a standard for future generations. 
+              We celebrate these accomplishments as a testament to our mission: nurturing well‑rounded individuals ready to thrive in society.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</section><!-- ================== Achievements Table ================== -->
+<section class="achievements-table py-5">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color:#2d6a4f;">Achievements Overview</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped align-middle">
+        <thead class="table-success" style="background-color:#2d6a4f; color:white;">
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Achievement</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- SPELLING BEE -->
+          <tr>
+            <td>Bamiro Joseph & Ejalonibu Khalilulahi</td>
+            <td>Spelling Bee</td>
+            <td>Won FCT Finals, represented in Lagos</td>
+            <td>2015</td>
+          </tr>
+          <tr>
+            <td>Ogbogo Victory & Bakare Roqeebat</td>
+            <td>Spelling Bee</td>
+            <td>Won FCT Finals</td>
+            <td>2016</td>
+          </tr>
+          <tr>
+            <td>Ejalonibu Khalilulahi</td>
+            <td>Spelling Bee</td>
+            <td>Qualified to represent FCT in Lagos</td>
+            <td>2017</td>
+          </tr>
+          <tr>
+            <td>Abiloro Divine</td>
+            <td>Spelling Bee</td>
+            <td>Won FCT Finals</td>
+            <td>2017</td>
+          </tr>
+          <tr>
+            <td>EKMA Students</td>
+            <td>Spelling Bee</td>
+            <td>Participated and won competitions</td>
+            <td>2018</td>
+          </tr>
+          <tr>
+            <td>Godson Chioma</td>
+            <td>Spelling Bee</td>
+            <td>Represented FCT, 2nd Position in Nigeria</td>
+            <td>2018</td>
+          </tr>
+          <tr>
+            <td>Abdulhamid Bello</td>
+            <td>Spelling Bee</td>
+            <td>Won FCT Finals</td>
+            <td>2021</td>
+          </tr>
+          <tr>
+            <td>Godson Chioma</td>
+            <td>Spelling Bee</td>
+            <td>Won FCT Finals</td>
+            <td>2022</td>
+          </tr>
+
+          <!-- JETS -->
+          <tr>
+            <td>Onuahra Mercy</td>
+            <td>JETS National Competition</td>
+            <td>Winner – Upper Primary (National Level)</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>Onuahra Victoria</td>
+            <td>JETS National Competition</td>
+            <td>Winner – Lower Primary (National Level)</td>
+            <td>N/A</td>
+          </tr>
+
+          <!-- CHESS -->
+          <tr>
+            <td>Adokpa Praise & Miner Chris</td>
+            <td>Chess Competition</td>
+            <td>Represented school in competition</td>
+            <td>2018</td>
+          </tr>
+
+          <!-- SHAMUDO SPELLING BEE -->
+          <tr>
+            <td>Anyaegbu Chioma</td>
+            <td>Shamudo Spelling Bee</td>
+            <td>Overall 1st Position (Bwari Area Council)</td>
+            <td>2018</td>
+          </tr>
+          <tr>
+            <td>Abiloro</td>
+            <td>Shamudo Spelling Bee</td>
+            <td>1st Position – Secondary Section</td>
+            <td>2018</td>
+          </tr>
+
+          <!-- ESSAY -->
+          <tr>
+            <td>Mary Jane Utom</td>
+            <td>Essay Competition</td>
+            <td>Winner – Skye Bank North Central Essay Competition</td>
+            <td>2018</td>
+          </tr>
+
+          <!-- SKILLS -->
+          <tr>
+            <td>EKMA Students</td>
+            <td>Entrepreneurship</td>
+            <td>Training in Shoe Making, Tailoring, Barbing, Photography, Cosmetology</td>
+            <td>Ongoing</td>
+          </tr>
+
+          <!-- COMMUNITY -->
+          <tr>
+            <td>EKMA Students</td>
+            <td>Community Service</td>
+            <td>Charity Outreach to Kuchiko Rehabilitation Center</td>
+            <td>Ongoing</td>
+          </tr>
+          <tr>
+            <td>EKMA Students</td>
+            <td>Community Service</td>
+            <td>Donations & Support in partnership with Child Care Trust</td>
+            <td>Ongoing</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+  
+<section id="achievements" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color:#2d6a4f;">Our Achievements</h2>
+      <p class="lead">Celebrating excellence in academics, sports, creativity, and service.</p>
+    </div>
+
+    <div id="achievementsCarousel" class="carousel slide" data-bs-ride="carousel">
+      
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#achievementsCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#achievementsCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#achievementsCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#achievementsCarousel" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#achievementsCarousel" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#achievementsCarousel" data-bs-slide-to="5"></button>
+      </div>
+
+      <!-- Carousel Inner -->
+      <div class="carousel-inner">
+
+       <!-- Slide 1 -->
+<div class="carousel-item active">
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="achievement-card shadow-sm text-center p-4">
+        <div class="achievement-img-wrapper position-relative" data-bs-toggle="modal" data-bs-target="#achievementModal1">
+          <img src="GRAPHICS/ekma achivements image 1.jpeg" alt="Abiloro Divine & Jedidah Ibrahim" class="achievement-img img-fluid mb-3 curve-left">
+          <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> View Image</span></div>
+        </div>
+        <h4 class="fw-semibold">Abiloro Divine & Jedidah Ibrahim</h4>
+        <p>Overall FCT Spelling Bee Competition & Maths Award</p>
+      </div>
+    </div>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="achievementModal1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="GRAPHICS/ekma achivements image 1.jpeg" class="img-fluid rounded" alt="Abiloro Divine & Jedidah Ibrahim">
+          <div class="p-3 text-center">Abiloro Divine & Jedidah Ibrahim — Overall FCT Spelling Bee & Maths Award</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="achievement-card shadow-sm text-center p-4">
+        <div class="achievement-img-wrapper position-relative" data-bs-toggle="modal" data-bs-target="#achievementModal2">
+          <img src="GRAPHICS/ekma achievement 2.jpg" alt="Jedidah Ibrahim" class="achievement-img img-fluid mb-3 curve-right">
+          <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> View Image</span></div>
+        </div>
+        <h4 class="fw-semibold">Jedidah Ibrahim</h4>
+        <p>Gold Medalist in 100m Sprint at the State Athletics Championship.</p>
+      </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal fade" id="achievementModal2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="GRAPHICS/ekma achievement 2.jpg" class="img-fluid rounded" alt="Jedidah Ibrahim">
+          <div class="p-3 text-center">Jedidah Ibrahim — Gold Medalist in 100m Sprint</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="achievement-card shadow-sm text-center p-4">
+        <div class="achievement-img-wrapper position-relative" data-bs-toggle="modal" data-bs-target="#achievementModal3">
+          <img src="GRAPHICS/ekma achievement 3.jpg" alt="EKMA Visit to Orphanage Home" class="achievement-img img-fluid mb-3 curve-left">
+          <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> View Image</span></div>
+        </div>
+        <h4 class="fw-semibold">EKMA Visit to Orphanage Home</h4>
+        <p>Organized visit to the orphans.</p>
+      </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="achievementModal3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="GRAPHICS/ekma achievement 3.jpg" class="img-fluid rounded" alt="EKMA Visit to Orphanage Home">
+          <div class="p-3 text-center">EKMA Visit to Orphanage Home — Organized visit to the orphans</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <!-- Card 4 -->
+            <div class="col-md-4">
+              <div class="achievement-card shadow-sm text-center p-4">
+                <div class="achievement-img-wrapper position-relative" data-bs-toggle="modal" data-bs-target="#achievementModal4">
+                  <img src="images/innovation1.jpg" alt="Science Club" class="achievement-img img-fluid mb-3 curve-right">
+                  <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> View Image</span></div>
+                </div>
+                <h4 class="fw-semibold">Science Club</h4>
+                <p>Robotics Project showcased at National STEM Fair.</p>
+              </div>
+            </div>
+            <!-- Modal 4 -->
+            <div class="modal fade" id="achievementModal4" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <img src="images/innovation1.jpg" class="img-fluid rounded" alt="Science Club">
+                  <div class="p-3 text-center">Science Club — Robotics Project</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4">
+              <div class="achievement-card shadow-sm text-center p-4">
+                <div class="achievement-img-wrapper position-relative" data-bs-toggle="modal" data-bs-target="#achievementModal5">
+                  <img src="images/alumni1.jpg" alt="Dr. Chinedu Eze" class="achievement-img img-fluid mb-3 curve-left">
+                  <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> View Image</span></div>
+                </div>
+                <h4 class="fw-semibold">Dr. Chinedu Eze</h4>
+                <p>Leading medical researcher contributing to global health.</p>
+              </div>
+            </div>
+            <!-- Modal 5 -->
+            <div class="modal fade" id="achievementModal5" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <img src="images/alumni1.jpg" class="img-fluid rounded" alt="Dr. Chinedu Eze">
+                  <div class="p-3 text-center">Dr. Chinedu Eze — Medical Researcher</div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-md-4">
+              <div class="achievement-card shadow-sm text-center p-4">
+                <div class="achievement-img-wrapper position-relative" data-bs-toggle="modal" data-bs-target="#achievementModal6">
+                  <img src="images/debate.jpg" alt="Debate Team" class="achievement-img img-fluid mb-3 curve-right">
+                  <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> View Image</span></div>
+                </div>
+                <h4 class="fw-semibold">Debate Team</h4>
+                <p>Winners of State Debate Championship 2024.</p>
+              </div>
+            </div>
+            <!-- Modal 6 -->
+            <div class="modal fade" id="achievementModal6" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <img src="images/debate.jpg" class="img-fluid rounded" alt="Debate Team">
+                  <div class="p-3 text-center">Debate Team — State Champions 2024</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <!-- Card 7 -->
+            <div class="col-md-4">
+              <div class="achievement-card shadow-sm text-center p-4">
+                <div class="achievement-img-wrapper position-relative" data-bs-toggle="modal" data-bs-target="#achievementModal7">
+                  <img src="images/music.jpg" alt="Music Club" class="achievement-img img-fluid mb-3 curve-left">
+                  <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> View Image</span></div>
+                </div>
+                <h4 class="fw-semibold">Music Club</h4>
+                <p>Performed at National Arts Festival 2025.</p>
+              </div>
+            </div>
+            <!-- Modal 7 -->
+            <div class="modal fade" id="achievementModal7" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <img src="images/music.jpg" class="img-fluid rounded" alt="Music Club">
+                  <div class="p-3 text-center">Music Club — National Arts Festival 2025</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-md-4">
+              <div class="achievement-card shadow-sm text-center p-4">
+                <div class="achievement-img-wrapper position-relative" data-bs-toggle="modal" data-bs-target="#achievementModal8">
+                  <img src="images/art.jpg" alt="Art Exhibition" class="achievement-img img-fluid mb-3 curve-right">
+                  <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> View Image</span></div>
+                </div>
+                <h4 class="fw-semibold">Art Exhibition</h4>
+                <p>Students’ artworks displayed at City Gallery.</p>
+              </div>
+            </div>
+            <!-- Modal 8 -->
+            <div class="modal fade" id="achievementModal8" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <img src="images/art.jpg" class="img-fluid rounded" alt="Art Exhibition">
+                  <div class="p-3 text-center">Art Exhibition — City Gallery Showcase</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="col-md-4">
+              <div class="achievement-card shadow-sm text-center p-4">
+                <div class="achievement-img-wrapper position-relative" data-bs-toggle="modal" data-bs-target="#achievementModal9">
+                  <img src="images/charity.jpg" alt="Charity Drive" class="achievement-img img-fluid mb-3 curve-left">
+                  <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> View Image</span></div>
+                </div>
+                <h4 class="fw-semibold">Charity Drive</h4>
+                <p>Raised funds for local orphanage.</p>
+              </div>
+            </div>
+            <!-- Modal 9 -->
+            <div class="modal fade" id="achievementModal9" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <img src="images/charity.jpg" class="img-fluid rounded" alt="Charity Drive">
+                  <div class="p-3 text-center">Charity Drive — Supporting Local Orphanage</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Continue same pattern for Slides 4–6 (Cards 10–18) -->
+      </div>
+<!-- Carousel Inner -->
+<div class="carousel-inner">
+  <!-- your carousel-item slides go here -->
+</div> <!-- carousel-inner -->
+
+<!-- Controls -->
+<button class="carousel-control-prev" type="button" data-bs-target="#achievementsCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#achievementsCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+</div> <!-- end carousel -->
+
+</div> <!-- end container -->
+</section> <!-- end achievements -->
+
+
+<section class="academics-cta-section">
+  <div class="container">
+    <div class="cta-content d-flex flex-column align-items-center text-center">
+
+      <!-- Text -->
+      <div class="cta-text mb-4">
+        <h2>Give Your Child the Best Start in Life</h2>
+        <p>
+          Enroll your child at EKMA today and provide a nurturing, creative, and academically excellent environment
+          from Day Care through Primary School. Our expert educators ensure every child thrives and grows confidently.
+        </p>
+      </div>
+
+      <!-- Button -->
+      <div>
+        <a href="admission.html" class="cta-button">
+          Enroll Now
+          <i class="bi bi-arrow-right-short"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- EKMA Footer -->
+<footer class="ekma-footer">
+<!-- Subscribe / Newsletter Section -->
+<div class="footer-subscribe">
+  <div class="container text-center">
+    <h3 class="footer-subscribe-title">Stay updated with Ekma</h3>
+    <p class="footer-subscribe-text">
+      Subscribe to our newsletter for the latest news, events, and updates.
+    </p>
+    <form class="subscribe-form" onsubmit="event.preventDefault(); showModal();">
+      <input type="email" id="subscribe-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div id="subscribeModal" class="modal-overlay">
+  <div class="modal-box">
+    <h4>Subscription Successful</h4>
+    <p>Thank you for subscribing! We’ll keep you updated.</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+
+  <!-- Main Footer Content -->
+  <div class="footer-main">
+    <div class="container">
+      <div class="row gy-4">
+<!-- Logo & About -->
+<div class="col-md-4">
+  <div class="footer-logo">
+    <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="logo-img">
+    <p>
+      EXCELLENT KIDDIES MONTESSORI ACADEMY nurtures young minds through quality education, 
+      creativity, and character‑building activities. We provide a safe and inspiring environment 
+      where children are guided to develop strong academic foundations, moral values, and social skills.
+    </p>
+  </div>
+</div>
+<!-- Quick Links -->
+<div class="col-md-2">
+  <h5>Quick Links</h5>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="History.html">History</a></li>
+    <li><a href="Admission.html">Admissions</a></li>
+    <li><a href="Activities.html">Activities</a></li>
+    <li><a href="news-event.html">News & Events</a></li>
+     <li><a href="Achievements.html">Achievements</a></li>
+  </ul>
+</div>
+
+
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Plot A2 Action Area, Behind Federal Government Girls College Bwari. Plot 217 Kuduru Layout Behind Nigerian Law School, Off Kuduru Road Bwari FCT</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 806 0220 612</p>
+          <p><i class="bi bi-telephone-fill"></i> +234 905 4146 797</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@gmail.com</p>
+          <p><i class="bi bi-envelope-fill"></i> excellentkmontacademy@yahoo.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-3">
+          <h5>Follow Us</h5>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+<!-- Bottom Footer -->
+<div class="footer-bottom">
+  <p>
+    &copy; 2026 Excellent Kiddies Montessori Academy. All Rights Reserved. 
+    Website Built By 
+    <a href="https://sophajs.com/" class="footer-credit-link" target="_blank">
+      Sophajs Global Tech
+    </a>
+  </p>
+</div>
+
+
+</footer>
+
+<script>
+  function showModal() {
+    const emailInput = document.getElementById("subscribe-email");
+    if (emailInput.value) {
+      // Show modal
+      document.getElementById("subscribeModal").style.display = "flex";
+      // Clear input field
+      emailInput.value = "";
+    }
+  }
+
+  function closeModal() {
+    document.getElementById("subscribeModal").style.display = "none";
+  }
+
+  // Optional: close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById("subscribeModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+
+<script>
+  window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+  });
+</script>
+
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
