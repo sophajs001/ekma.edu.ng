@@ -201,7 +201,7 @@
     <p class="activities-hero-subtext lead">
       From academics to arts, sports, clubs, and community service — discover how EKMA nurtures the whole child
     </p>
-    <a href="#activities" class="activities-hero-btn btn btn-lg mt-3">Explore Activities</a>
+
   </div>
 </section>
 
@@ -486,9 +486,10 @@
               and everyday learning moments. Explore how our students learn, play, create, 
               and grow into well‑rounded individuals.
             </p>
-            <a href="gallery-videos.html" class="btn btn-activities mt-3">
-              View All Galleries & Videos
-            </a>
+            <a href="photo-gallery.html" class="btn btn-activities mt-3">
+  View All Galleries & Videos
+</a>
+
           </div>
         </div>
       </div>
@@ -505,45 +506,58 @@
 
 <!-- EKMA Footer -->
 <footer class="ekma-footer">
-
-  <!-- Subscribe / Newsletter Section -->
-  <div class="footer-subscribe">
-    <div class="container text-center">
-      <h3>Stay Updated with EKMA</h3>
-      <p>Subscribe to our newsletter for the latest news, events, and updates.</p>
-      <form class="subscribe-form">
-        <input type="email" placeholder="Enter your email">
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
+<!-- Subscribe / Newsletter Section -->
+<div class="footer-subscribe">
+  <div class="container text-center">
+    <h3 class="footer-subscribe-title">Stay updated with Ekma</h3>
+    <p class="footer-subscribe-text">
+      Subscribe to our newsletter for the latest news, events, and updates.
+    </p>
+    <form class="subscribe-form" onsubmit="event.preventDefault(); showModal();">
+      <input type="email" id="subscribe-email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
   </div>
+</div>
+
+<!-- Success Modal -->
+<div id="subscribeModal" class="modal-overlay">
+  <div class="modal-box">
+    <h4>Subscription Successful</h4>
+    <p>Thank you for subscribing! We’ll keep you updated.</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
 
   <!-- Main Footer Content -->
   <div class="footer-main">
     <div class="container">
       <div class="row gy-4">
+<!-- Logo & About -->
+<div class="col-md-4">
+  <div class="footer-logo">
+    <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="logo-img">
+    <p>
+      EXCELLENT KIDDIES MONTESSORI ACADEMY nurtures young minds through quality education, 
+      creativity, and character‑building activities. We provide a safe and inspiring environment 
+      where children are guided to develop strong academic foundations, moral values, and social skills.
+    </p>
+  </div>
+</div>
+<!-- Quick Links -->
+<div class="col-md-2">
+  <h5>Quick Links</h5>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="History.html">History</a></li>
+    <li><a href="Admission.html">Admissions</a></li>
+    <li><a href="Activities.html">Activities</a></li>
+    <li><a href="news-event.html">News & Events</a></li>
+     <li><a href="Achievements.html">Achievements</a></li>
+  </ul>
+</div>
 
-        <!-- Logo & About -->
-        <div class="col-md-4">
-          <div class="footer-logo">
-            <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="logo-img">
-            <p>EXCELLENT KIDDIES MONTESSORI ACADEMY nurtures young minds through quality education, creativity, and character-building activities.</p>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="col-md-2">
-          <h5>Quick Links</h5>
-          <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Admissions</a></li>
-            <li><a href="#">Academics</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">News & Events</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
 
         <!-- Contact Info -->
         <div class="col-md-3">
@@ -569,15 +583,44 @@
       </div>
     </div>
   </div>
+  
 <!-- Bottom Footer -->
 <div class="footer-bottom">
   <p>
     &copy; 2026 Excellent Kiddies Montessori Academy. All Rights Reserved. 
-    Website Built By Sophajs Global Tech.
+    Website Built By 
+    <a href="https://sophajs.com/" class="footer-credit-link" target="_blank">
+      Sophajs Global Tech
+    </a>
   </p>
 </div>
 
+
 </footer>
+
+<script>
+  function showModal() {
+    const emailInput = document.getElementById("subscribe-email");
+    if (emailInput.value) {
+      // Show modal
+      document.getElementById("subscribeModal").style.display = "flex";
+      // Clear input field
+      emailInput.value = "";
+    }
+  }
+
+  function closeModal() {
+    document.getElementById("subscribeModal").style.display = "none";
+  }
+
+  // Optional: close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById("subscribeModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
 
 <script>
   window.addEventListener("load", function() {

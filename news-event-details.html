@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excellent Kiddies Montessori Academy | EKMA</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head> 
+<body>
+
+<!-- Announcement Modal -->
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md"><!-- compact modal -->
+    <div class="modal-content shadow-sm rounded-3">
+
+      <!-- Header -->
+      <div class="modal-header border-0">
+        <h6 class="modal-title fw-bold text-success ms-2" id="announcementModalLabel">Announcements</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <!-- Announcement List -->
+        <ul class="list-group list-group-flush small mb-3">
+          <li class="list-group-item">Admissions ongoing for 2026/2027 session</li>
+          <li class="list-group-item">Common Entrance update: Forms available</li>
+          <li class="list-group-item">Resumption date: 15th March 2026</li>
+          <li class="list-group-item">Exam timetable release soon</li>
+        </ul>
+
+        <!-- Newsletter Section -->
+        <div class="text-start mb-3 ms-2">
+          <p class="fw-semibold mb-2">Full Newsletter Available</p>
+          <a href="ASSETS/NEWSPAPER 6th January 2026.pdf" 
+             class="btn btn-success btn-sm" 
+             download>
+            Download <i class="bi bi-download"></i>
+          </a>
+          <a href="ASSETS/NEWSPAPER 6th January 2026.pdf" 
+             target="_blank" 
+             class="btn btn-outline-primary btn-sm ms-2">
+            View Online <i class="bi bi-eye"></i>
+          </a>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="border-top pt-3 ms-2">
+          <h6 class="fw-semibold mb-2">Other Resources</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="ASSETS/SchoolFeesBreakdown.pdf" class="btn btn-outline-secondary btn-sm" download>
+              School Fees Breakdown
+            </a>
+            <a href="ASSETS/ListOfBooks.pdf" class="btn btn-outline-secondary btn-sm" download>
+              List of Books
+            </a>
+            <a href="ASSETS/BusRoutingPrices.pdf" class="btn btn-outline-secondary btn-sm" download>
+              Bus Routing Prices
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer border-0 justify-content-center">
+        <small class="text-danger fw-semibold text-center">
+          *Announcements and resources are updated regularly.*
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Top Header Bar -->
+<div class="header-top">
+  <div class="container-fluid p-0"> <!-- remove container padding -->
+    <div class="row m-0 align-items-center"> <!-- remove row margin -->
+      
+    <!-- Left: Follow Us -->
+<div class="col-6 d-flex align-items-center header-left">
+  <div class="follow-us ms-3">
+    <span>Follow Us:</span>
+    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+  </div>
+</div>
+
+      <!-- Right: Contact Info -->
+      <div class="col-6 d-flex align-items-center justify-content-end header-right">
+        <div class="contact-info me-3">
+          <span><i class="bi bi-geo-alt"></i> Bwari, Abuja FCT</span>
+          <span><i class="bi bi-envelope"></i> excellentkmontacademy@gmail.com</span>
+          <span><i class="bi bi-telephone"></i> +234 806 0220 612, +234 905 4146 797 </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="GRAPHICS/EKMA Logo.png" alt="EKMA Logo" class="me-2 rounded-circle" height="45" width="45">
+      <span class="fw-bold fs-6">EKMA</span>
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" 
+            aria-label="Toggle navigation">
+      <span class="hamburger"><i class="bi bi-list"></i></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+              <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
+              <li><a class="dropdown-item" href="Mission-vision.html">Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="Facilities.html">Facilities Overview</a></li>
+            </ul>
+          </li>
+
+          <!-- Academics Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="primary-section.html">Nursery / Primary Section</a></li>
+              <li><a class="dropdown-item" href="secondary-section.html">Secondary Section</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Admission.html">Admission</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="Achievements.html">Achievements</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">Blog</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#announcementModal">Announcements</a></li>
+              <li><a class="dropdown-item" href="news-events.html">News & Events</a></li>
+              <li><a class="dropdown-item" href="photo-gallery.html">Photo Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+<!-- Bell Notification -->
+<li class="nav-item ms-lg-3">
+  <a href="#" class="nav-link position-relative bell-link" data-bs-toggle="modal" data-bs-target="#announcementModal">
+    <i class="bi bi-bell-fill bell-icon"></i>
+    <span class="badge bell-badge">1</span>
+  </a>
+</li>
+
+        </ul>
+
+        <!-- Social Media Icons (mobile only) -->
+        <div class="mt-3 text-center d-lg-none d-block">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="news-hero position-relative">
+  <img id="heroImage" src="" alt="" class="w-100">
+  <div class="news-hero-content position-absolute text-center text-white">
+    <h1 id="heroTitle" class="fw-bold"></h1>
+    <p id="heroSubtitle" class="lead"></p>
+  </div>
+</section>
+
+<!-- News Detail Page -->
+<section class="news-detail py-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Main Content -->
+      <div class="col-lg-8">
+        <article class="news-article">
+
+          <!-- Featured Image -->
+          <div class="news-featured mb-4">
+            <img id="featuredImage" src="" alt="" class="img-fluid rounded w-100">
+          </div>
+
+          <!-- Summary Caption -->
+          <div class="news-summary d-flex flex-column p-4">
+            <h2 id="summaryTitle" class="news-title mb-2"></h2>
+            <p id="summaryMeta" class="news-meta text-muted mb-3"></p>
+            <p id="summaryIntro" class="news-intro"></p>
+          </div>
+
+          <!-- Detailed Body -->
+          <div id="newsBody" class="news-body mt-4"></div>
+
+        </article>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <aside class="news-sidebar">
+
+          <!-- Search -->
+          <div class="sidebar-box mb-4">
+            <h5 class="sidebar-title">Search News</h5>
+            <form>
+              <input type="text" class="form-control" placeholder="Type to search...">
+            </form>
+          </div>
+
+          <!-- Recent Posts -->
+          <div class="sidebar-box mb-4">
+            <h5 class="sidebar-title">Recent Posts</h5>
+            <ul class="list-unstyled sidebar-list">
+              <li class="d-flex align-items-center mb-3">
+                <img src="GRAPHICS/symposium-thumb.jpg" alt="Symposium" class="sidebar-thumb">
+                <div class="ms-2">
+                  <a href="news-event-details.html?id=symposium">Academic Symposium</a>
+                  <div class="sidebar-date">Feb 2026</div>
+                </div>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <img src="GRAPHICS/retreat-thumb.jpg" alt="Retreat" class="sidebar-thumb">
+                <div class="ms-2">
+                  <a href="news-event-details.html?id=retreat">Spiritual Retreat</a>
+                  <div class="sidebar-date">Jan 2026</div>
+                </div>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <img src="GRAPHICS/choir-thumb.jpg" alt="Choir" class="sidebar-thumb">
+                <div class="ms-2">
+                  <a href="news-event-details.html?id=choir">Seminary Choir Concert</a>
+                  <div class="sidebar-date">Dec 2025</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Trending News -->
+          <div class="sidebar-box mb-4">
+            <h5 class="sidebar-title">Trending News</h5>
+            <!-- You can keep these static or also link them with ?id= -->
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="news.js"></script>
+
+<script>
+// News data source
+const newsData = {
+  "inauguration": {
+    heroImage: "GRAPHICS/Ekma image 3.jpg",
+    heroTitle: "Inauguration of 2024/2025 Session",
+    heroSubtitle: "Opening ceremony for the new academic year.",
+    featuredImage: "GRAPHICS/Ekma image 3.jpg",
+    summaryTitle: "Inauguration of 2024/2025 Session",
+    summaryMeta: "Published Oct 2024",
+    summaryIntro: "EKMA officially opened the 2024/2025 academic session with a vibrant ceremony.",
+    body: `
+      <p>The inauguration featured speeches from faculty and student leaders...</p>
+      <p>It marked the beginning of a new academic journey for all students.</p>
+    `
+  },
+
+  "community-service": {
+    heroImage: "GRAPHICS/ekma lab test.jpg",
+    heroTitle: "Community Service Day",
+    heroSubtitle: "Giving back to society.",
+    featuredImage: "GRAPHICS/ekma lab test.jpg",
+    summaryTitle: "Community Service Day",
+    summaryMeta: "Published Oct 2024",
+    summaryIntro: "Students participated in various service activities to support the local community.",
+    body: `
+      <p>Activities included environmental clean-up, health awareness campaigns...</p>
+    `
+  },
+
+  "sports-day": {
+    heroImage: "GRAPHICS/Ekma image 2.jpg",
+    heroTitle: "Sports Day Highlights",
+    heroSubtitle: "Celebrating athletic talent and teamwork.",
+    featuredImage: "GRAPHICS/Ekma image 2.jpg",
+    summaryTitle: "Sports Day Highlights",
+    summaryMeta: "Published Nov 2024",
+    summaryIntro: "The annual sports day showcased students’ athletic skills and team spirit.",
+    body: `
+      <p>Track and field events, football matches, and relay races thrilled the audience...</p>
+    `
+  },
+
+  "science-fair": {
+    heroImage: "GRAPHICS/Ekma image 4.jpg",
+    heroTitle: "Annual Science Fair",
+    heroSubtitle: "Innovation and discovery at EKMA.",
+    featuredImage: "GRAPHICS/Ekma image 4.jpg",
+    summaryTitle: "Annual Science Fair",
+    summaryMeta: "Published Dec 2024",
+    summaryIntro: "Students presented creative projects and experiments at the science fair.",
+    body: `
+      <p>Projects ranged from robotics to environmental solutions...</p>
+    `
+  },
+
+  "cultural-day": {
+    heroImage: "GRAPHICS/Ekma.jpg",
+    heroTitle: "Cultural Day Celebration, 2026",
+    heroSubtitle: "A vibrant showcase of tradition, talent, and unity at EKMA.",
+    featuredImage: "GRAPHICS/Ekma Cultural day.jpg",
+    summaryTitle: "Cultural Day Celebration",
+    summaryMeta: "Published Jan 2025",
+    summaryIntro: "EKMA’s annual Cultural Day brought together students, parents, and staff in a colorful celebration of heritage, creativity, and community spirit.",
+    body: `
+      <p>On March 20, 2026, the EKMA community gathered for its highly anticipated Cultural Day Celebration...</p>
+      <p>Students proudly represented different ethnic groups...</p>
+      <p>The Cultural Day not only entertained but also educated...</p>
+      <p>The atmosphere was filled with joy, pride, and togetherness...</p>
+    `
+  },
+
+  "graduation": {
+    heroImage: "GRAPHICS/Ekma image 6.jpg",
+    heroTitle: "Graduation Ceremony",
+    heroSubtitle: "Celebrating academic achievement.",
+    featuredImage: "GRAPHICS/Ekma image 6.jpg",
+    summaryTitle: "Graduation Ceremony",
+    summaryMeta: "Published Feb 2025",
+    summaryIntro: "The graduation ceremony honored students completing their studies.",
+    body: `
+      <p>Certificates were awarded, and proud families celebrated the graduates...</p>
+    `
+  },
+
+  "debate": {
+    heroImage: "GRAPHICS/Ekma image 7.jpg",
+    heroTitle: "Debate Competition",
+    heroSubtitle: "Sharpening minds through dialogue.",
+    featuredImage: "GRAPHICS/Ekma image 7.jpg",
+    summaryTitle: "Debate Competition",
+    summaryMeta: "Published Mar 2025",
+    summaryIntro: "Students engaged in lively debates on contemporary issues.",
+    body: `
+      <p>The competition encouraged critical thinking and public speaking skills...</p>
+    `
+  },
+
+  "music-festival": {
+    heroImage: "GRAPHICS/Ekma image 8.jpg",
+    heroTitle: "Music Festival",
+    heroSubtitle: "A celebration of rhythm and harmony.",
+    featuredImage: "GRAPHICS/Ekma image 8.jpg",
+    summaryTitle: "Music Festival",
+    summaryMeta: "Published Apr 2025",
+    summaryIntro: "The EKMA music festival featured performances from choirs and bands.",
+    body: `
+      <p>Students showcased their musical talents in front of a cheering audience...</p>
+    `
+  },
+
+  "art-exhibition": {
+    heroImage: "GRAPHICS/Ekma image 9.jpg",
+    heroTitle: "Art Exhibition",
+    heroSubtitle: "Creativity on display.",
+    featuredImage: "GRAPHICS/Ekma image 9.jpg",
+    summaryTitle: "Art Exhibition",
+    summaryMeta: "Published May 2025",
+    summaryIntro: "The art exhibition displayed paintings, sculptures, and crafts by students.",
+    body: `
+      <p>Parents and guests admired the creativity and skill of the young artists...</p>
+    `
+  },
+
+  "symposium": {
+    heroImage: "GRAPHICS/symposium-banner.jpg",
+    heroTitle: "Academic Symposium, 2026",
+    heroSubtitle: "Exploring innovation and scholarship at EKMA.",
+    featuredImage: "GRAPHICS/symposium-main.jpg",
+    summaryTitle: "Academic Symposium",
+    summaryMeta: "Published Feb 2026",
+    summaryIntro: "EKMA hosted its annual symposium with scholars and students...",
+    body: `
+      <p>The symposium featured keynote speakers and panel discussions...</p>
+    `
+  },
+
+  "retreat": {
+    heroImage: "GRAPHICS/retreat-banner.jpg",
+    heroTitle: "Spiritual Retreat, 2026",
+    heroSubtitle: "A time of reflection and renewal.",
+    featuredImage: "GRAPHICS/retreat-main.jpg",
+    summaryTitle: "Spiritual Retreat",
+    summaryMeta: "Published Jan 2026",
+    summaryIntro: "EKMA’s retreat offered students and staff a chance to reconnect spiritually.",
+    body: `
+      <p>The retreat included prayer sessions, meditation, and group reflections...</p>
+    `
+  }
+};
+
+// Get ID from URL
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+// Populate page
+if (id && newsData[id]) {
+  const data = newsData[id];
+  document.getElementById("heroImage").src = data.heroImage;
+  document.getElementById("heroTitle").textContent = data.heroTitle;
+  document.getElementById("heroSubtitle").textContent = data.heroSubtitle;
+  document.getElementById("featuredImage").src = data.featuredImage;
+  document.getElementById("summaryTitle").textContent = data.summaryTitle;
+  document.getElementById("summaryMeta").textContent = data.summaryMeta;
+  document.getElementById("summaryIntro").textContent = data.summaryIntro;
+  document.getElementById("newsBody").innerHTML = data.body;
+} else {
+  // Fallback if ID not found
+  document.getElementById("heroTitle").textContent = "Event Not Found";
+  document.getElementById("heroSubtitle").textContent = "Please return to the News & Events page.";
+}
+</script>
+<script>
+  window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+  });
+</script>
+
+ <!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
