@@ -1053,7 +1053,7 @@ body.loaded {
 
 /* RIGHT SIDE IMAGE */
 .discover-right {
-  background-image: url("GRAPHICS/ekma image 1.png"); /* change image */
+  background-image: url("GRAPHICS/ekma\ image\ 1.jpeg"); /* change image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
