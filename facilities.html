@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,8 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+<body>
+
 <!-- Announcement Modal -->
 <div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-md"><!-- compact modal -->
@@ -54,15 +57,7 @@
         <div class="border-top pt-3 ms-2">
           <h6 class="fw-semibold mb-2">Other Resources</h6>
           <div class="d-flex flex-wrap gap-2">
-            <a href="ASSETS/SchoolFeesBreakdown.pdf" class="btn btn-outline-secondary btn-sm" download>
-              School Fees Breakdown
-            </a>
-            <a href="ASSETS/ListOfBooks.pdf" class="btn btn-outline-secondary btn-sm" download>
-              List of Books
-            </a>
-            <a href="ASSETS/BusRoutingPrices.pdf" class="btn btn-outline-secondary btn-sm" download>
-              Bus Routing Prices
-            </a>
+            <!-- PDF resources coming soon -->
           </div>
         </div>
       </div>
@@ -140,8 +135,8 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="History.html">History</a></li>
               <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
-              <li><a class="dropdown-item" href="mission-vision.html">Mission & Vision</a></li>
-              <li><a class="dropdown-item" href="facilities.html">Facilities Overview</a></li>
+              <li><a class="dropdown-item" href="Mission-vision.html">Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="Facilities.html">Facilities Overview</a></li>
             </ul>
           </li>
 
@@ -191,116 +186,438 @@
   </div>
 </nav>
 
-<!-- Facilities Hero -->
-<section class="facilities-hero">
-  <img src="GRAPHICS/ekma lab.jpeg" alt="Facilities Overview" class="facilities-hero-img">
 
-  <div class="facilities-hero-content">
-    <h1 class="facilities-hero-title">Explore Our World-Class Facilities</h1>
-    
-    <p class="facilities-hero-subtext">
-      From modern labs and sports arenas to creative studios, robotics, and safe playgrounds
-    </p>
 
+<!-- Admission Page Hero -->
+<section class="admission-hero">
+  <img src="GRAPHICS/admission-hero.jpeg" alt="Admission Hero" class="admission-hero-img">
+
+  <div class="admission-hero-content text-center">
+    <h1 class="admission-hero-title fw-bold">Admissions at EKMA</h1>
+    <p class="admission-hero-subtext lead">From Nursery foundations to Secondary excellence</p>
   </div>
 </section>
 
+<!-- Admission Intro Section -->
+<section id="admission-intro" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="intro-box">
+          <div class="intro-line"></div>
+          <div class="intro-text ps-4">
+            <p class="secondary-text">
+              At Excellent Kiddies Montessori Academy, admissions are designed to be simple, transparent, and welcoming. From our nurturing Day Care and Crèche, through Nursery and Primary, and into Secondary school, we provide clear steps and supportive guidance at every stage. Our admission process ensures each learner is placed in the right environment to thrive academically, socially, and emotionally. With experienced teachers, a caring community, and a strong track record of success,
+               EKMA is the right choice for building lives for greatness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-
-<section id="facilities" class="py-5 bg-light">
+<section id="admission-requirements" class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="fw-bold">Our Facilities</h2>
-      <p class="lead">EKMA offers world-class facilities that inspire learning, creativity, and innovation for every child.</p>
+      <h2 class="fw-bold">Admission Requirements</h2>
+      <p class="lead">Clear steps for each stage of your child’s journey</p>
     </div>
 
     <div class="row g-4">
-      <!-- Sports Complex -->
-      <div class="col-md-6 col-lg-4">
-        <div class="facility-card shadow-sm h-100 text-center p-4">
-          <div class="facility-img-wrapper position-relative">
-            <img src="GRAPHICS/ekma sport image.jpeg" alt="Sports Complex" class="facility-img img-fluid mb-3 curve-left">
-            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
+      <!-- Nursery & Crèche -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-success"> Crèche, KG & Nursery</h5>
+            <ul class="list-unstyled">
+              <li>✔ Birth certificate</li>
+              <li>✔ Medical/immunization record</li>
+              <li>✔ Passport photographs</li>
+            </ul>
           </div>
-          <h4 class="fw-semibold">Sports Complex</h4>
-          <p>Football pitch, basketball & volleyball courts, athletics track, and indoor games for fitness and teamwork.</p>
         </div>
       </div>
 
-      <!-- Science Labs -->
-      <div class="col-md-6 col-lg-4">
-        <div class="facility-card shadow-sm h-100 text-center p-4">
-          <div class="facility-img-wrapper position-relative">
-            <img src="GRAPHICS/ekma chemistry lab.jpeg" alt="Science Labs" class="facility-img img-fluid mb-3 curve-right">
-            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
+      <!-- Primary -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Primary School</h5>
+            <ul class="list-unstyled">
+              <li>✔ Admission form</li>
+              <li>✔ Birth certificate</li>
+              <li>✔ Medical report</li>
+              <li>✔ Previous school report card (if transferring)</li>
+            </ul>
           </div>
-          <h4 class="fw-semibold">Science Laboratories</h4>
-          <p>Physics, Chemistry, Biology, Agricultural Science, and Computer labs for hands-on learning and innovation.</p>
         </div>
       </div>
 
-      <!-- Robotics & Innovation -->
-      <div class="col-md-6 col-lg-4">
-        <div class="facility-card shadow-sm h-100 text-center p-4">
-          <div class="facility-img-wrapper position-relative">
-            <img src="GRAPHICS/ekma computer lab.jpeg" alt="Robotics Lab" class="facility-img img-fluid mb-3 curve-left">
-            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
+      <!-- Secondary (spanning full width) -->
+      <div class="col-12">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-danger">Secondary School</h5>
+            <ul class="list-unstyled">
+              <li>✔ Admission form</li>
+              <li>✔ Entrance exam (English, Mathematics, General Knowledge)</li>
+              <li>✔ Interview with student and parents</li>
+              <li>✔ Transfer certificate (if applicable)</li>
+              <li>✔ Medical report</li>
+              <li>✔ Passport photographs</li>
+            </ul>
           </div>
-          <h4 class="fw-semibold">Robotics & Innovation Lab</h4>
-          <p>Hands-on robotics, coding, and AI projects that prepare students for the future of technology.</p>
-        </div>
-      </div>
-
-      <!-- Music & Arts -->
-      <div class="col-md-6 col-lg-4">
-        <div class="facility-card shadow-sm h-100 text-center p-4">
-          <div class="facility-img-wrapper position-relative">
-            <img src="GRAPHICS/ekma music and art .jpeg" alt="Music & Arts" class="facility-img img-fluid mb-3 curve-right">
-            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
-          </div>
-          <h4 class="fw-semibold">Music & Arts Studio</h4>
-          <p>Dedicated music studio, instruments, and art rooms that nurture creativity and cultural expression.</p>
-        </div>
-      </div>
-
-      <!-- Playground -->
-      <div class="col-md-6 col-lg-4">
-        <div class="facility-card shadow-sm h-100 text-center p-4">
-          <div class="facility-img-wrapper position-relative">
-            <img src="GRAPHICS/ekma play ground.jpeg" alt="Playground" class="facility-img img-fluid mb-3 curve-left">
-            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
-          </div>
-          <h4 class="fw-semibold">Children’s Playground</h4>
-          <p>Safe and fun playgrounds with swings, slides, and climbing frames to encourage play and social interaction.</p>
-        </div>
-      </div>
-
-      <!-- Transport -->
-      <div class="col-md-6 col-lg-4">
-        <div class="facility-card shadow-sm h-100 text-center p-4">
-          <div class="facility-img-wrapper position-relative">
-            <img src="GRAPHICS/emka buses.jpeg" alt="School Buses" class="facility-img img-fluid mb-3 curve-right">
-            <div class="overlay"><span class="overlay-icon"><i class="bi bi-zoom-in"></i> Click to View</span></div>
-          </div>
-          <h4 class="fw-semibold">School Transport</h4>
-          <p>A fleet of well-maintained buses ensures safe and reliable transportation for students across the city.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Modal -->
-<div class="modal fade" id="facilityModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <img src="" id="modalImage" class="img-fluid rounded" alt="Facility Image">
-      <div class="p-3 text-center" id="modalCaption"></div>
+<section id="admission-process" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Admission Process</h2>
+      <p class="lead">We are delighted that you are considering Excellent Kiddies Montessori Academy for your child.</p>
+      <p>Our admission process is simple, transparent, and designed to ensure that every child is placed appropriately for success.</p>
+    </div>
+
+  <!-- Flowchart -->
+  <div class="flowchart">
+    <div class="flow-step">
+      <div class="circle">1</div>
+      <h5>Visit the School</h5>
+      <p>Parents or guardians are encouraged to visit the school to make inquiries and experience our environment firsthand.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">2</div>
+      <h5>Review Fees & Facilities</h5>
+      <p>During your visit, you will be guided through our fee structure and shown around our facilities.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">3</div>
+      <h5>Obtain Admission Form</h5>
+      <p>An admission form will be issued for completion. Required documents should be submitted alongside the form.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">4</div>
+      <h5>Entrance Examination</h5>
+      <p>The child will sit for a placement exam appropriate for their age and class level.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">5</div>
+      <h5>Admission Decision</h5>
+      <p>Admission is granted based on exam performance and overall assessment.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">6</div>
+      <h5>Payment of Fees</h5>
+      <p>Upon successful admission, parents complete payment of fees. Uniforms and books are then issued.</p>
+    </div>
+    <div class="flow-step">
+      <div class="circle">7</div>
+      <h5>Resumption</h5>
+      <p>The child resumes school on the approved date and officially becomes part of the EKMA family.</p>
     </div>
   </div>
-</div>
  
+
+</section>
+   <section class="container my-5">
+  <h2 class="mb-4">School Fees & Tuition Analysis</h2>
+  <p>Transparent breakdown of all costs per term</p>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>Category</th>
+          <th>Term</th>
+          <th>Tuition</th>
+          <th>Books & Stationery</th>
+          <th>Uniforms</th>
+          <th>Extracurricular</th>
+          <th>Total (per term)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Day Care -->
+        <tr>
+          <td rowspan="3">Day Care / Crèche & Nursery</td>
+          <td>First Term</td>
+          <td>₦XX,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦XX,XXX</td>
+        </tr>
+        <tr>
+          <td>Second Term</td>
+          <td>₦XX,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦XX,XXX</td>
+        </tr>
+        <tr>
+          <td>Third Term</td>
+          <td>₦XX,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦XX,XXX</td>
+        </tr>
+
+        <!-- Primary School -->
+        <tr>
+          <td rowspan="3">Primary School</td>
+          <td>First Term</td>
+          <td>₦XX,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦XX,XXX</td>
+        </tr>
+        <tr>
+          <td>Second Term</td>
+          <td>₦XX,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦XX,XXX</td>
+        </tr>
+        <tr>
+          <td>Third Term</td>
+          <td>₦XX,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦XX,XXX</td>
+        </tr>
+
+        <!-- Secondary School -->
+        <tr>
+          <td rowspan="3">Secondary School</td>
+          <td>First Term</td>
+          <td>₦XX,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦XX,XXX</td>
+        </tr>
+        <tr>
+          <td>Second Term</td>
+          <td>₦XX,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦XX,XXX</td>
+        </tr>
+        <tr>
+          <td>Third Term</td>
+          <td>₦XX,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦X,XXX</td>
+          <td>₦XX,XXX</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="container my-5">
+  <div class="text-center mb-4">
+    <h3 class="fw-bold">School Bus Routes & Fees</h3>
+    <p class="lead">Convenient transport options across Abuja & Bwari</p>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered align-middle text-center">
+      <thead class="table-primary">
+        <tr>
+          <th>Route</th>
+          <th>Pickup Areas</th>
+          <th>Fee (per term)</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Route 1</td>
+          <td>Wuse, Garki, Maitama</td>
+          <td>₦XX,XXX</td>
+          <td>Central Abuja coverage</td>
+        </tr>
+        <tr>
+          <td>Route 2</td>
+          <td>Bwari Town, Dutse, Kubwa</td>
+          <td>₦XX,XXX</td>
+          <td>Northwest corridor</td>
+        </tr>
+        <tr>
+          <td>Route 3</td>
+          <td>Lugbe, Airport Road, Jabi</td>
+          <td>₦XX,XXX</td>
+          <td>Airport axis</td>
+        </tr>
+        <tr>
+          <td>Route 4</td>
+          <td>Life Camp, Gwarinpa, Kado</td>
+          <td>₦XX,XXX</td>
+          <td>Residential estates</td>
+        </tr>
+        <tr>
+          <td>Route 5</td>
+          <td>Nyanya, Karu, Mararaba</td>
+          <td>₦XX,XXX</td>
+          <td>Eastern gateway</td>
+        </tr>
+        <tr>
+          <td>Route 6</td>
+          <td>Kubwa Extension, Dei-Dei</td>
+          <td>₦XX,XXX</td>
+          <td>Expanding suburbs</td>
+        </tr>
+        <tr>
+          <td>Route 7</td>
+          <td>Gwagwalada, Zuba</td>
+          <td>₦XX,XXX</td>
+          <td>Southwest corridor</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Note -->
+  <div class="mt-3 text-center">
+    <p class="small text-muted">
+      *Fees are payable per term. Routes may be adjusted based on demand. 
+      Discounts available for siblings. All payments are receipted and transparent.*
+    </p>
+  </div>
+</section>
+
+
+<section class="discover-split">
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+
+      <!-- LEFT SIDE -->
+      <div class="col-lg-6 discover-left">
+        <div class="container">
+          <div class="discover-content">
+            <h2 class="discover-title">
+              Discover the <span>DIFFERENCE</span>
+            </h2>
+
+            <p class="discover-text">
+              At Excellent Kiddies Montessori Academy, we nurture curiosity,
+              build confidence, and develop lifelong learners through
+              hands-on Montessori education.
+            </p>
+
+            <div class="discover-features">
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                Montessori-Based Learning
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                Experienced Educators
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                Safe Environment
+              </div>
+            </div>
+
+            <a href="#" class="btn discover-btn">
+              Apply for Admission
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-6 discover-right"></div>
+
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<section class="faq-section">
+  <div class="container-fluid p-0">
+    <div class="faq-content row gx-5">
+
+      <!-- LEFT COLUMN -->
+      <div class="col-lg-6">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">What are the admission requirements?</button>
+            <div class="faq-answer">
+              <p>Students must meet our academic prerequisites and submit required documents including birth certificate and past academic records.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is there a uniform policy?</button>
+            <div class="faq-answer">
+              <p>Yes, all students are required to wear the school uniform, details of which are provided upon admission.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="col-lg-6">
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">What extracurricular activities are offered?</button>
+            <div class="faq-answer">
+              <p>We offer sports, music, art, and STEM clubs to enrich the students’ learning experience.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How can parents stay involved in school activities?</button>
+            <div class="faq-answer">
+              <p>Parents can join our PTA, attend school events, and participate in volunteer programs.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What support services are available for students?</button>
+            <div class="faq-answer">
+              <p>We provide counseling, tutoring, and mentorship programs to support each student’s development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Admission CTA Section -->
+<section class="admission-cta py-5">
+  <div class="container">
+    <div class="cta-inner text-center">
+      <h2 class="fw-bold mb-3">Have Questions About Admissions?</h2>
+      <p class="lead mb-4">
+        Our team is here to guide you through the admission process and answer any questions you may have.
+        Contact us today to schedule an appointment or learn more about enrollment.
+      </p>
+      <a href="Contact.html" class="cta-btn">
+        Contact Us <i class="bi bi-arrow-right-short"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- EKMA Footer -->
 <footer class="ekma-footer">
 <!-- Subscribe / Newsletter Section -->
@@ -350,7 +667,7 @@
     <li><a href="History.html">History</a></li>
     <li><a href="Admission.html">Admissions</a></li>
     <li><a href="Activities.html">Activities</a></li>
-    <li><a href="news-events.html">News & Events</a></li>
+    <li><a href="news-event.html">News & Events</a></li>
      <li><a href="Achievements.html">Achievements</a></li>
   </ul>
 </div>
@@ -418,20 +735,6 @@
     }
   }
 </script>
-
-
-<script>
-  // Attach click event to all facility images
-  document.querySelectorAll('.facility-img-wrapper').forEach(wrapper => {
-    wrapper.addEventListener('click', function() {
-      const imgSrc = this.querySelector('img').getAttribute('src');
-      document.getElementById('modalImage').setAttribute('src', imgSrc);
-      const modal = new bootstrap.Modal(document.getElementById('facilityModal'));
-      modal.show();
-    });
-  });
-</script>
-
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -614,5 +917,11 @@ window.addEventListener('scroll', () => {
     document.body.classList.add("loaded");
   });
 </script>
- 
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
 
