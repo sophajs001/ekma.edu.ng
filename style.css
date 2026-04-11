@@ -1442,6 +1442,10 @@ body.loaded {
   position: relative;
   z-index: 10;
 }
+.footer-credit-link {
+  white-space: nowrap;
+}
+
 
 /* =====================
    Subscribe / Newsletter
@@ -1585,22 +1589,48 @@ body.loaded {
   font-size: 0.9rem;
   color: #e6e6e6;
   border-top: 1px solid rgba(255,255,255,0.2);
-}
-.footer-bottom p {
-  text-align: center;
-  margin: 0 auto;
-}
-.footer-bottom {
   display: flex;
-  justify-content: center;   /* horizontal center */
-  align-items: center;       /* vertical center */
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.footer-bottom p {
+  margin: 0;
+  width: 100%;
+  max-width: 980px;
+  white-space: normal;
 }
 
 .footer-bottom p {
-  margin: 0;   /* remove default paragraph spacing */
+  font-size: 1rem;
 }
 
+@media (max-width: 576px) {
+  .footer-bottom {
+    padding: 18px 12px;
+    flex-direction: column;
+  }
+  .footer-bottom p {
+    display: block;
+    font-size: 0.85rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer-bottom .footer-credit {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    text-align: center;
+  }
+  .footer-bottom .footer-credit-link {
+    display: inline-block;
+    white-space: normal !important;
+    word-break: break-word;
+    font-size: 0.85rem;
+  }
+}
 
 /* Responsive */
 @media (max-width: 768px) {
