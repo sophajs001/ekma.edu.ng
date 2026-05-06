@@ -3956,7 +3956,44 @@ html, body {
   .achievements-hero-subtext { font-size: 14px; }
 }
 
+.achievement-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+.achievement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Overlay */
+.achievement-img-wrapper {
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.overlay-icon {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.achievement-card:hover .overlay {
+  opacity: 1;
+}
 /* Achievements Hero Button */
 .achievements-hero-btn {
   background: #ffffff;
